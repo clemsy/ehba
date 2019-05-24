@@ -1,0 +1,32 @@
+
+        <div>
+            {% paginate craft.entries.section('calendar').orderBy('id DESC').limit(10) as items %}
+            <ul>
+                {% for k, item in items %}
+                <li>
+                    <a href="{{item.url}}">
+                        <div class="columns">
+                            {% if item.eventPoster.one() %}
+                            <div class="column is-2" style="">
+                                <img src="{{ item.eventPoster.one().getUrl() }}" class=" card" style="width: 200px;">
+                            </div>
+                            {% endif %}
+                            <div class="column auto">
+                                <h4 class="title is-4">{{item.eventTitle}}
+                                    - {{item.eventCity}} ({{item.eventCountry}})
+                                </h4>
+                                <span>From {{item.eventDateFrom|date('short', timezone='UTC', locale='en')}} to  {{item.eventDateTo|date('short', timezone='UTC', locale='en')}}</span>
+                                <br>
+                                Location :
+                                {{item.eventLocation}}
+                                <p>
+                                    {{item.eventDetail}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+

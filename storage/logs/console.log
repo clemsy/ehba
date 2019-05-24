@@ -1,0 +1,152 @@
+2019-05-21 07:33:53 [-][-][-][error][craft\db\Connection::open] Connection::dsn cannot be empty.
+2019-05-21 07:33:53 [-][-][-][error][craft\base\ApplicationTrait::getIsDbConnectionValid] There was a problem connecting to the database: Craft CMS can’t connect to the database with the credentials in config/db.php.
+2019-05-21 07:33:53 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with craft\queue\Queue::bootstrap()
+2019-05-21 07:33:53 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/welcome
+2019-05-21 07:33:53 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionWelcome()
+2019-05-21 07:33:53 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/security-key
+2019-05-21 07:33:53 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionSecurityKey()
+2019-05-21 07:33:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '15310'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'USER' => 'hbp'
+    'MAIL' => '/var/mail/hbp'
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games'
+    'PWD' => '/var/www/vhosts/hbp.ovh/ehba'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/var/www/vhosts/hbp.ovh'
+    'LOGNAME' => 'hbp'
+    '_' => '/opt/plesk/php/7.2/bin/php'
+    'OLDPWD' => '/var/www/vhosts/hbp.ovh'
+    'PHP_SELF' => 'craft'
+    'SCRIPT_NAME' => 'craft'
+    'SCRIPT_FILENAME' => 'craft'
+    'PATH_TRANSLATED' => 'craft'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1558424033.2664
+    'REQUEST_TIME' => 1558424033
+    'argv' => [
+        0 => 'craft'
+        1 => 'setup/welcome'
+    ]
+    'argc' => 2
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => ''
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'localhost'
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_DATABASE' => ''
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => ''
+    'DB_PORT' => ''
+]
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Command::query] SHOW TABLES
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Command::query] SHOW TABLES
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Command::query] SHOW TABLES
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with craft\queue\Queue::bootstrap()
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-24 22:33:01 [-][-][-][trace][yii\base\Controller::runAction] Route to run: install/plugin
+2019-05-24 22:33:01 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\InstallController::actionPlugin()
+2019-05-24 22:33:01 [-][-][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+WHERE `handle`='lukeyouell/craft-countryselect'
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+WHERE `handle`='lukeyouell/craft-countryselect'
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+WHERE `handle`='lukeyouell/craft-countryselect'
+LIMIT 1
+2019-05-24 22:33:01 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.rlGDJqjHPV/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x0:0:1'
+    'PATH' => '/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.0/bin:/Users/clement/adb-fastboot:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vendor/bin'
+    'HOME' => '/Users/clement'
+    'LC_CTYPE' => 'en_US.UTF-8'
+    'MAIL' => '/var/mail/root'
+    'LOGNAME' => 'root'
+    'USER' => 'root'
+    'USERNAME' => 'root'
+    'SHELL' => '/bin/sh'
+    'SUDO_COMMAND' => '/usr/local/opt/php@7.1/bin/php craft install/plugin lukeyouell/craft-countryselect'
+    'SUDO_USER' => 'clement'
+    'SUDO_UID' => '502'
+    'SUDO_GID' => '20'
+    'PHP_SELF' => 'craft'
+    'SCRIPT_NAME' => 'craft'
+    'SCRIPT_FILENAME' => 'craft'
+    'PATH_TRANSLATED' => 'craft'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1558729981.1174
+    'REQUEST_TIME' => 1558729981
+    'argv' => [
+        0 => 'craft'
+        1 => 'install/plugin'
+        2 => 'lukeyouell/craft-countryselect'
+    ]
+    'argc' => 3
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'localhost'
+    'DB_USER' => 'hbp'
+    'DB_PASSWORD' => '•••••••••••'
+    'DB_DATABASE' => 'hbp'
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => 'craft_'
+    'DB_PORT' => '3306'
+    'DEFAULT_SITE_URL' => 'https://hbp.ovh'
+]

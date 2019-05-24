@@ -1,0 +1,26 @@
+{% extends "/layout" %}
+
+{% set entry = craft.entries().slug('ehba').one() %}
+{% set homepage = true %}
+{% block content %}
+<div class="is-fullwidth">
+    <div class="page-content">
+        <h1 class="title is-2">{{entry.pageTitle}}</h1>
+        <div class="content">
+            {{entry.pageContent}}
+        </div>
+    </div>
+
+    <hr>
+    <div class="columns">
+        <div class="column is-6">
+            {% include 'news/_latest' %}
+        </div>
+        <div class="column is-6">
+            {% include 'calendar/_latest' %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

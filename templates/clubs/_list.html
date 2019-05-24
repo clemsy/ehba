@@ -1,0 +1,89 @@
+
+{%
+set clubQuery = craft.entries
+.section('clubs')
+.select('field_clubCountry')
+.orderBy('field_clubCountry ASC')
+.distinct('field_clubCountry')
+.column()
+%}
+
+{% set country = craft.app.request.getParam('country') %}
+
+{% if country != '' %}
+
+{% set query = country %}
+{% set allEntries = craft.entries({
+clubQuery:query
+}).section('clubs').orderBy('clubName ASC').all() %}
+{% set allEntriesByCountry = allEntries %}
+
+
+{% else %}
+
+{% set allEntries = craft.entries.section('clubs').search(country).orderBy('clubName asc') .all()%}
+{% set allEntriesByCountry = allEntries  %}
+
+{% endif  %}
+
+<div>
+
+    <!--
+    <select class="form-control" id="distSelectCountry"  onchange="countryChange(this);" style="color:#000;font-weight: bolder">
+        <option value="" >{{"Filter By Country"|t}}</option>
+        {% for entry in clubQuery %}
+        <option value="{{entry}}" {% if entry==country %} selected {% endif  %}>{{ entry|t }}</option>
+        {% endfor  %}
+    </select>
+    -->
+
+    {% paginate craft.entries.section('clubs') as items %}
+
+    <articles>
+        {% for k, item in items %}
+        <article>
+            <a href="{{item.url}}">
+
+
+                {% if item.clubLogo.one() %}
+                <div class="card is-pulled-left" style="margin:0 1rem 1rem 0">
+                    <img src="{{ item.clubLogo.one().getUrl()|replace({'clm': 'ovh'}) }}" class=" card" style="width: 200px;">
+                </div>
+                {% endif %}
+
+                <h4 class="title is-4 is-marginless">{{item.clubName}}</h4>
+                <div>
+                    {{item.clubCity}} {{item.clubCountry}}
+                    <ul>
+                        <li>
+                            {{item.clubUrl}}
+                        </li>
+                        <li>
+                            {{item.clubFacebookUrl}}
+                        </li>
+                        <li>
+                            {{item.clubInstagramUrl}}
+                        </li>
+                    </ul>
+
+                    Contact person : {{item.clubContactPerson}} : {{item.clubContactEmail}}
+                    <hr>
+                    <div class="content">
+                        {{item.clubDetail}}
+                    </div>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </articles>
+</div>
+
+
+
+<script type="text/javascript">
+    function countryChange(selectObj) {
+        var selectIndex=selectObj.selectedIndex;
+        var selectValue=selectObj.options[selectIndex].value;
+        window.location.href =  '{{ url('ehba/clubs') }}?country=' + selectValue  ;
+    }
+</script>

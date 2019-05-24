@@ -1,0 +1,74 @@
+
+<nav class="navbar is-black">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-left" href="/" style="">
+                <img src="/img/ehba-logo.svg" style="height:60px">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu ">
+
+            <div class="navbar-end">
+            </div>
+            <div class="navbar-end ">
+
+                <div class="navbar-item">
+                    <a class=" is-white" href="/">
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a class="" href="{{ url('ehba/harcourt-bike-polo') }}">
+                        <span>Harcourt Bike Polo?</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a class="" href="{{ url('news') }}">
+                        <span>News</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a class="" href="{{ url('calendar') }}">
+                        <span>Calendar</span>
+                    </a>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable is-dark">
+                    <a class="navbar-link">
+                        EHBA
+                    </a>
+
+                    <div class="navbar-dropdown is-transparent">
+                        <a class="navbar-item" href="{{ url('ehba/about') }}">
+                            About the EHBA
+                        </a>
+                        <a class="navbar-item" href="{{ url('ehba/the-ehba-committee') }}">
+                            The Comittee
+                        </a>
+                        <a class="navbar-item" href="{{ url('ehba/the-history') }}">
+                            History
+                        </a>
+                        <a class="navbar-item" href="{{ url('ehba/clubs') }}">
+                            Clubs
+                        </a>
+                        <a class="navbar-item" href="{{ url('ehba/rules') }}">
+                            Rules
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item">
+                    <a class="" href="{{ url('ehba/contact') }}">
+                        <span>Contact us</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>

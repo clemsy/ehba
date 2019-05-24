@@ -1,0 +1,34 @@
+
+        <div>
+            {% paginate craft.entries.section('news').orderBy('newsDate DESC').limit(10) as items %}
+
+            <ul>
+                {% for k, item in items %}
+                <li>
+                    <a href="{{item.url}}">
+                        <h4 class="title is-4">{{item.newsTitle}}</h4>
+                        <span>posted on {{item.newsDate|date('long', timezone='UTC', locale='en')}}</span>
+                        <div class="columns">
+
+                            {% if item.pageBanner.one() %}
+                            <div class="column is-2" style="">
+                                <img src="{{ item.pageBanner.one().getUrl() }}" class=" card" style="width: 200px;">
+                            </div>
+                            {% endif %}
+                            <div class="column auto">
+                                {{item.newsSummary}}
+                            </div>
+                        </div>
+                        <div>
+
+                            <h3 class="title is-5 has-no-bm is-pulled-right">
+                                {% for tag in craft.tags.relatedTo(item).all() %}
+                                <span class="tag is-dark is-medium" style="margin-bottom: 0.3rem">{{ tag.title }}</span>
+                                {% endfor %}
+                            </h3>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>

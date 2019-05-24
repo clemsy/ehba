@@ -1,0 +1,161 @@
+a:2:{i:0;a:12:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:9:"copyright";N;s:11:"dateCreated";O:8:"DateTime":3:{s:4:"date";s:26:"2019-04-09 10:04:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:6;s:11:"description";N;s:9:"generator";N;s:2:"id";s:25:"https://craftcms.com/blog";s:5:"items";a:20:{i:0;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:211:"
+          <p>We’re excited to announce that we have acquired Feed Me from Verbb, and it’s now completely free!</p>
+
+          <p><a href="https://craftcms.com/blog/feed-me">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-04-09 10:04:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:20;s:9:"permalink";s:33:"https://craftcms.com/blog/feed-me";s:7:"summary";s:211:"
+          <p>We’re excited to announce that we have acquired Feed Me from Verbb, and it’s now completely free!</p>
+
+          <p><a href="https://craftcms.com/blog/feed-me">Continue reading</a></p>
+        ";s:5:"title";s:24:"We’ve Acquired Feed Me";s:10:"enclosures";N;}i:1;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:205:"
+          <p>The Craft Plugin Store hit a major milestone in February: it now features over 500 plugins!</p>
+
+          <p><a href="https://craftcms.com/blog/500-plugins">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-03-01 14:23:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:34;s:9:"permalink";s:37:"https://craftcms.com/blog/500-plugins";s:7:"summary";s:205:"
+          <p>The Craft Plugin Store hit a major milestone in February: it now features over 500 plugins!</p>
+
+          <p><a href="https://craftcms.com/blog/500-plugins">Continue reading</a></p>
+        ";s:5:"title";s:12:"500 Plugins!";s:10:"enclosures";N;}i:2;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:156:"
+          <p>The Craft community has a new home on Discord.</p>
+
+          <p><a href="https://craftcms.com/blog/discord">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-02-11 09:07:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:48;s:9:"permalink";s:33:"https://craftcms.com/blog/discord";s:7:"summary";s:156:"
+          <p>The Craft community has a new home on Discord.</p>
+
+          <p><a href="https://craftcms.com/blog/discord">Continue reading</a></p>
+        ";s:5:"title";s:18:"Join us on Discord";s:10:"enclosures";N;}i:3;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:271:"
+          <p>For over 20 years Media Temple has been an innovator in the hosting space and now they're a Craft Preferred Hosting Provider.</p>
+
+          <p><a href="https://craftcms.com/blog/new-preferred-hosting-provider-media-temple">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-31 09:52:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:62;s:9:"permalink";s:69:"https://craftcms.com/blog/new-preferred-hosting-provider-media-temple";s:7:"summary";s:271:"
+          <p>For over 20 years Media Temple has been an innovator in the hosting space and now they're a Craft Preferred Hosting Provider.</p>
+
+          <p><a href="https://craftcms.com/blog/new-preferred-hosting-provider-media-temple">Continue reading</a></p>
+        ";s:5:"title";s:44:"New Preferred Hosting Provider: Media Temple";s:10:"enclosures";N;}i:4;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:195:"
+          <p>Craft 2 and Commerce 1 EOL dates updated, and Commerce gateway integrations go MIT.</p>
+
+          <p><a href="https://craftcms.com/blog/odds-ends">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-22 12:06:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:76;s:9:"permalink";s:35:"https://craftcms.com/blog/odds-ends";s:7:"summary";s:195:"
+          <p>Craft 2 and Commerce 1 EOL dates updated, and Commerce gateway integrations go MIT.</p>
+
+          <p><a href="https://craftcms.com/blog/odds-ends">Continue reading</a></p>
+        ";s:5:"title";s:11:"Odds & Ends";s:10:"enclosures";N;}i:5;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:217:"
+          <p>Craft 3.1 includes over 100 enhancements that drastically improve collaboration and deployment workflows.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-15 12:08:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:90;s:9:"permalink";s:35:"https://craftcms.com/blog/craft-3-1";s:7:"summary";s:217:"
+          <p>Craft 3.1 includes over 100 enhancements that drastically improve collaboration and deployment workflows.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1">Continue reading</a></p>
+        ";s:5:"title";s:9:"Craft 3.1";s:10:"enclosures";N;}i:6;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:175:"
+          <p>After nine months in Beta, Commerce 2 is ready for prime time!</p>
+
+          <p><a href="https://craftcms.com/blog/commerce-2">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-15 12:06:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:104;s:9:"permalink";s:36:"https://craftcms.com/blog/commerce-2";s:7:"summary";s:175:"
+          <p>After nine months in Beta, Commerce 2 is ready for prime time!</p>
+
+          <p><a href="https://craftcms.com/blog/commerce-2">Continue reading</a></p>
+        ";s:5:"title";s:10:"Commerce 2";s:10:"enclosures";N;}i:7;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:233:"
+          <p>Browse plugins, view their changelogs, and purchase them directly from plugins.craftcms.com.</p>
+
+          <p><a href="https://craftcms.com/blog/introducing-the-new-craft-plugin-store">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-15 12:03:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:118;s:9:"permalink";s:64:"https://craftcms.com/blog/introducing-the-new-craft-plugin-store";s:7:"summary";s:233:"
+          <p>Browse plugins, view their changelogs, and purchase them directly from plugins.craftcms.com.</p>
+
+          <p><a href="https://craftcms.com/blog/introducing-the-new-craft-plugin-store">Continue reading</a></p>
+        ";s:5:"title";s:38:"Introducing the New Craft Plugin Store";s:10:"enclosures";N;}i:8;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:183:"
+          <p>Join us in Melbourne, Australia for a one-day Craft Conference.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-one-australia">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2019-01-14 17:45:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:132;s:9:"permalink";s:43:"https://craftcms.com/blog/dot-one-australia";s:7:"summary";s:183:"
+          <p>Join us in Melbourne, Australia for a one-day Craft Conference.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-one-australia">Continue reading</a></p>
+        ";s:5:"title";s:32:"Craft CMS is Coming to Australia";s:10:"enclosures";N;}i:9;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:248:"
+          <p>Here’s a recap of what happened in 2018, and a look at what’s to come in 2019 and beyond for Craft CMS and Craft Commerce.</p>
+
+          <p><a href="https://craftcms.com/blog/state-of-craft-2018">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-12-19 10:03:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:146;s:9:"permalink";s:45:"https://craftcms.com/blog/state-of-craft-2018";s:7:"summary";s:248:"
+          <p>Here’s a recap of what happened in 2018, and a look at what’s to come in 2019 and beyond for Craft CMS and Craft Commerce.</p>
+
+          <p><a href="https://craftcms.com/blog/state-of-craft-2018">Continue reading</a></p>
+        ";s:5:"title";s:19:"State of Craft 2018";s:10:"enclosures";N;}i:10;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:163:"
+          <p>Craft 3.1 Beta is here, and ready for testing!</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1-beta">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-11-27 12:07:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:160;s:9:"permalink";s:40:"https://craftcms.com/blog/craft-3-1-beta";s:7:"summary";s:163:"
+          <p>Craft 3.1 Beta is here, and ready for testing!</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1-beta">Continue reading</a></p>
+        ";s:5:"title";s:22:"Craft 3.1 Beta is Here";s:10:"enclosures";N;}i:11;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:185:"
+          <p>We’re excited to announce the launch of our Craft Partner Network.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-partners">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-11-16 09:10:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:174;s:9:"permalink";s:40:"https://craftcms.com/blog/craft-partners";s:7:"summary";s:185:"
+          <p>We’re excited to announce the launch of our Craft Partner Network.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-partners">Continue reading</a></p>
+        ";s:5:"title";s:37:"Introducing the Craft Partner Network";s:10:"enclosures";N;}i:12;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:232:"
+          <p>Enjoy all 20 talks on topics ranging from plugin development to GraphQL and Craft from Dot All 2018 in Berlin.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-all-2018-videos">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-11-15 17:27:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:188;s:9:"permalink";s:45:"https://craftcms.com/blog/dot-all-2018-videos";s:7:"summary";s:232:"
+          <p>Enjoy all 20 talks on topics ranging from plugin development to GraphQL and Craft from Dot All 2018 in Berlin.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-all-2018-videos">Continue reading</a></p>
+        ";s:5:"title";s:19:"Dot All 2018 Videos";s:10:"enclosures";N;}i:13;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:215:"
+          <p>CraftQuest’s “Up and Running with Craft” video course is now completely free to watch.</p>
+
+          <p><a href="https://craftcms.com/blog/learn-craft-for-free">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-11-14 12:18:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:202;s:9:"permalink";s:46:"https://craftcms.com/blog/learn-craft-for-free";s:7:"summary";s:215:"
+          <p>CraftQuest’s “Up and Running with Craft” video course is now completely free to watch.</p>
+
+          <p><a href="https://craftcms.com/blog/learn-craft-for-free">Continue reading</a></p>
+        ";s:5:"title";s:37:"Learn Craft for Free with CraftQuest!";s:10:"enclosures";N;}i:14;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:206:"
+          <p>Yesterday a new Craft site launched that we’re particularly excited about—ours!</p>
+
+          <p><a href="https://craftcms.com/blog/meet-the-new-website">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-10-10 11:42:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:216;s:9:"permalink";s:46:"https://craftcms.com/blog/meet-the-new-website";s:7:"summary";s:206:"
+          <p>Yesterday a new Craft site launched that we’re particularly excited about—ours!</p>
+
+          <p><a href="https://craftcms.com/blog/meet-the-new-website">Continue reading</a></p>
+        ";s:5:"title";s:25:"Meet the New Craftcms.com";s:10:"enclosures";N;}i:15;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:244:"
+          <p>Craft 3.1 is coming later this year, and it will bring two major new features that we’re pretty excited about.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1-dev-preview-is-here">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-09-11 12:19:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:230;s:9:"permalink";s:55:"https://craftcms.com/blog/craft-3-1-dev-preview-is-here";s:7:"summary";s:244:"
+          <p>Craft 3.1 is coming later this year, and it will bring two major new features that we’re pretty excited about.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-3-1-dev-preview-is-here">Continue reading</a></p>
+        ";s:5:"title";s:29:"Craft 3.1 Dev Preview is Here";s:10:"enclosures";N;}i:16;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:244:"
+          <p>We just released Craft 2.7.0 with just one feature, but it’s a big one: PHP 7.2 compatibility.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-2-7-released-with-php-7-2-compatibility">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-07-31 00:00:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:244;s:9:"permalink";s:71:"https://craftcms.com/blog/craft-2-7-released-with-php-7-2-compatibility";s:7:"summary";s:244:"
+          <p>We just released Craft 2.7.0 with just one feature, but it’s a big one: PHP 7.2 compatibility.</p>
+
+          <p><a href="https://craftcms.com/blog/craft-2-7-released-with-php-7-2-compatibility">Continue reading</a></p>
+        ";s:5:"title";s:45:"Craft 2.7 Released with PHP 7.2 Compatibility";s:10:"enclosures";N;}i:17;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:251:"
+          <p>We’re excited to announce our partnership with Hyperlane, a Belgium-based hosting provider for modern agencies.</p>
+
+          <p><a href="https://craftcms.com/blog/new-craft-hosting-partner-hyperlane">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-06-20 00:00:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:258;s:9:"permalink";s:61:"https://craftcms.com/blog/new-craft-hosting-partner-hyperlane";s:7:"summary";s:251:"
+          <p>We’re excited to announce our partnership with Hyperlane, a Belgium-based hosting provider for modern agencies.</p>
+
+          <p><a href="https://craftcms.com/blog/new-craft-hosting-partner-hyperlane">Continue reading</a></p>
+        ";s:5:"title";s:36:"New Craft Hosting Partner: Hyperlane";s:10:"enclosures";N;}i:18;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:249:"
+          <p>Craft CMS is bringing Dot All, the official Craft developers conference, to Berlin, Germany September 26-28, 2018.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-all-2018-is-coming-to-berlin">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-05-10 00:00:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:272;s:9:"permalink";s:58:"https://craftcms.com/blog/dot-all-2018-is-coming-to-berlin";s:7:"summary";s:249:"
+          <p>Craft CMS is bringing Dot All, the official Craft developers conference, to Berlin, Germany September 26-28, 2018.</p>
+
+          <p><a href="https://craftcms.com/blog/dot-all-2018-is-coming-to-berlin">Continue reading</a></p>
+        ";s:5:"title";s:32:"Dot All 2018 is Coming to Berlin";s:10:"enclosures";N;}i:19;a:10:{s:7:"authors";a:0:{}s:10:"categories";a:0:{}s:7:"content";s:230:"
+          <p>Discover, purchase, and download plugins from within the Control Panel with the Plugin Store.</p>
+
+          <p><a href="https://craftcms.com/blog/introducing-the-craft-plugin-store">Continue reading</a></p>
+        ";s:12:"contributors";a:0:{}s:4:"date";O:8:"DateTime":3:{s:4:"date";s:26:"2018-04-04 14:04:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:19:"America/Los_Angeles";}s:11:"dateUpdated";r:286;s:9:"permalink";s:60:"https://craftcms.com/blog/introducing-the-craft-plugin-store";s:7:"summary";s:230:"
+          <p>Discover, purchase, and download plugins from within the Control Panel with the Plugin Store.</p>
+
+          <p><a href="https://craftcms.com/blog/introducing-the-craft-plugin-store">Continue reading</a></p>
+        ";s:5:"title";s:34:"Introducing The Craft Plugin Store";s:10:"enclosures";N;}}s:8:"language";s:5:"en-us";s:4:"link";s:25:"https://craftcms.com/blog";s:5:"title";s:14:"Craft CMS Blog";}i:1;N;}

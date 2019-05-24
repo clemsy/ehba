@@ -1,0 +1,18 @@
+{% set latest = craft.entries.section('calendar').orderBy('id DESC').limit(10) %}
+
+<h3 class="title is-4">Next Events</h3>
+<ul>
+    {% for k, item in latest.all() %}
+    <li style="margin-bottom: 1rem">
+        <a href="{{item.url}}">
+            <h6 class="title is-5 is-marginless">{{item.eventTitle}} <span class=" title is-6 small">  {{item.eventDateFrom|date('short')}}</span></h6>
+            <div class="content has-text-justified">
+                {{item.eventDetail|striptags|slice(0,190)}}...
+            </div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<div class="has-text-right small has-text-weight-bold">
+    <a href="{{url('calendar')}}">view all events in calendar &raquo;</a>
+</div>

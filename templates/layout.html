@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if pageTitle is defined %}{{ pageTitle }} - {% endif %} EHBA - European Hardcourt Bike Polo Association</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="/css/ehba.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+
+</head>
+<body class="is-dark">
+
+    <section class="hero is-black is-medium is-bold">
+        <div class="hero-head">
+            {% include '_nav' %}
+        </div>
+
+
+
+        {% if homepage|default(null) %}
+
+        <section class="hero is-primary">
+            <div class="hero-body is-large is-paddingless">
+                <div class="container">
+                    {% include '_carousel' %}
+                </div>
+            </div>
+        </section>
+        {% else %}
+        {% if entry.pageBanner.one() | length %}
+        <section class="hero is-primary">
+            <div class="hero-body is-large is-paddingless">
+                    <div class="carousel-legend has-text-right" style="position: absolute; bottom:0; left:0; right: 0 ;height: 40px;background: #E2E2E2;color:black;width:100%;opacity: 0.8">
+                        <div style="padding:4px;;z-index:9000;" class="has-text-weight-bold">
+                            {{ entry.pageBanner.one().title }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% endif %}
+    </section>
+
+    <section class="section">
+        <div class="container">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </section>
+
+    <footer class="footer is-hidden">
+        <div class="content has-text-centered is-small">
+                EHBA &copy {{ "now"|date("Y") }} - <a href="">facebook</a> - <a href="">instagram</a> - <a href="{{url('ehba/contact')}}">contact</a>
+        </div>
+    </footer>
+
+<script async type="text/javascript" src="/js/bulma.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
+<script>
+
+    var $carousel = $('.fcarousel').flickity({
+        cellAlign: 'center',
+        imagesLoaded: true,
+        bgLazyLoad: true,
+        autoPlay: 1500,
+        pauseAutoPlayOnHover: false,
+        percentPosition: true,
+        wrapAround: true
+    });
+
+
+</script>
+
+</body>
+
+</html>

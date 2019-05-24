@@ -1,0 +1,17 @@
+{% extends "/layout" %}
+{% set item = entry %}
+
+{% set pageTitle = entry.eventTitle ~ ' - Calendar' %}
+
+{% block content %}
+<div class="">
+    <div class="page-content">
+        <h1 class="title is-2 is-marginless">
+            {{ item.eventTitle }}
+        </h1>
+        <p>
+            Event detail to be implemented...
+        </p>
+    </div>
+</div>
+{% endblock %}

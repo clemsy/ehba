@@ -1,0 +1,86 @@
+{% extends "/layout" %}
+{% set item = entry %}
+
+{% set pageTitle = entry.newsTitle ~ ' - News' %}
+{% block content %}
+<div class="">
+    <div class="page-content">
+
+        <h1 class="title is-2 is-marginless">
+            {{item.newsTitle}}
+        </h1>
+        <div>
+
+            <span>posted on {{item.newsDate|date('long', timezone='UTC', locale='en')}}</span>
+
+            <h3 class="title is-5 has-no-bm is-pulled-right">
+                {% for tag in craft.tags.relatedTo(item).all() %}
+                <span class="tag is-dark is-medium" style="margin-bottom: 0.3rem">{{ tag.title }}</span>
+                {% endfor %}
+            </h3>
+        </div>
+
+        <div class="container is-fullwidth" style="clear: both;border-top: 1px solid black;padding-top: 2rem">
+
+            <div class="columns">
+
+                {% if item.pageBanner.one() %}
+                <div class="column is-one-third" style="">
+                    <img src="{{ item.pageBanner.one().getUrl() }}" class=" card" style="width: 100%;">
+                </div>
+                {% endif %}
+                <div class="column auto content">
+                    {{item.newsBody}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Carousel -->
+            {% set pictures = item.pageAssets.all() %}
+            {% if pictures|length %}
+        <hr>
+
+        <h3 class="title is-5 has-no-bm">Pictures :</h3>
+        <div class="columns is-multiline">
+            {% for k, asset in pictures %}
+            <div class="item-{{k}} column">
+                <div class="card-image">
+                    <figure class="image">
+                        <a href="{{ asset.getUrl() }}" data-title="{{asset.title}}" data-toggle="lightbox" data-gallery="example-gallery" class="" data-lightbox="gallery">
+                            <img src="{{ asset.getUrl('tn') }}" width="{{ asset.getWidth('tn') }}" height="{{ asset.getHeight('tn') }}" style="max-width:{{ asset.getWidth('tn') }}px">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <!-- End Carousel -->
+
+        {% set assets = item.documents.all() %}
+        {% if assets|length %}
+        <hr>
+
+        <section class="">
+            <h3 class="title is-5 has-no-bm">Files :</h3>
+            <ul class=" list-files">
+                {% for k, asset in assets %}
+                <li class="">
+                    <a href="{{ asset.getUrl() }}" class="">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+
+                        <span>{{ asset.title }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+
+
+
+    </div>
+
+</div>
+{% endblock %}

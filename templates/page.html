@@ -1,0 +1,93 @@
+{% extends "/layout" %}
+{# Get the requested entry slug from the URL #}
+{% set requestedSlug = craft.app.request.getSegment(2) %}
+
+{# Fetch the entry with that slug #}
+{% set entry = craft.entries()
+.slug(requestedSlug|literal)
+.one() %}
+{% set pageTitle = entry.pageTitle %}
+{% block content %}
+<div class="is-fullwidth">
+
+
+    <div class="page-content">
+
+        <h1 class="title is-2">
+            {{entry.sectionTitle}}
+        </h1>
+
+        {% if entry.pageBanner.one() %}
+        <div class="is-hidden is-fullwidth" style="">
+            <img src="{{ entry.pageBanner.one().getUrl() }}" class=" card" style="width: 100%;">
+        </div>
+        {% endif %}
+
+        <div class="content has-text-left">
+            {{entry.pageContent}}
+        </div>
+
+
+        <!-- Start Carousel -->
+        {% set pictures = entry.pageAssets.all() %}
+        {% if pictures|length %}
+        <hr>
+        <h3 class="title is-5 has-no-bm">Pictures :</h3>
+        <div class="columns is-multiline">
+            {% for k, asset in pictures %}
+            <div class="item-{{k}} column">
+                <div class="card-image">
+                    <figure class="image">
+                        <a href="{{ asset.getUrl() }}" data-title="{{asset.title}}" data-toggle="lightbox" data-gallery="example-gallery" class="" data-lightbox="gallery">
+                            <img src="{{ asset.getUrl('tn') }}" width="{{ asset.getWidth('tn') }}" height="{{ asset.getHeight('tn') }}" style="max-width:{{ asset.getWidth('tn') }}px">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <!-- End Carousel -->
+
+        {% set assets = entry.documents.all() %}
+        {% if assets|length %}
+        <hr>
+
+        <section class="">
+            <h3 class="title is-5 has-no-bm">Files :</h3>
+            <ul class=" list-files">
+                {% for k, asset in assets %}
+                <li class="">
+                    <a href="{{ asset.getUrl() }}" class="">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+
+                        <span>{{ asset.title }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+
+    </div>
+
+
+    {% if requestedSlug == 'clubs' %}
+    <hr>
+    {% include 'clubs/_list' %}
+    {% endif %}
+    {% if requestedSlug == 'news' %}
+    <hr>
+    {% include 'news/_news' %}
+    {% endif %}
+    {% if requestedSlug == 'calendar' %}
+    <hr>
+    {% include 'calendar/_calendar' %}
+    {% endif %}
+    {% if requestedSlug == 'contact' %}
+    <hr>
+    {% include '_contact' %}
+    {% endif %}
+</div>
+{% endblock %}

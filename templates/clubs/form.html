@@ -1,0 +1,41 @@
+{% macro errorList(errors) %}
+{% if errors %}
+<ul class="errors">
+    {% for error in errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endmacro %}
+
+{% from _self import errorList %}
+
+<form method="post" action="" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    <input type="hidden" name="action" value="guest-entries/save">
+    <input type="hidden" name="sectionUid" value="59225f10-708f-475e-9c57-d97120360f09">
+    {{ redirectInput('success') }}
+
+    <label for="title">Club Name</label>
+    <input id="title" type="text" name="title"
+           {%- if entry is defined %} value="{{ entry.title }}"{% endif %}>
+
+    <label for="clubName">Club Name</label>
+    <input id="clubName" type="text" name="fields[clubName]"
+           {%- if entry is defined %} value="{{ entry.clubName }}"{% endif %}>
+
+    {% if entry is defined %}
+    {{ errorList(entry.getErrors('clubName')) }}
+    {% endif %}
+
+    <label for="clubDetail">Body</label>
+    <textarea id="clubDetail" name="fields[clubDetail]">
+        {%- if entry is defined %}{{ entry.clubDetail }}{% endif -%}
+    </textarea>
+
+    {% if entry is defined %}
+    {{ errorList(entry.getErrors('clubName')) }}
+    {% endif %}
+
+    <input type="submit" value="Publish">
+</form>
