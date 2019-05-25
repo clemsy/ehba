@@ -12,39 +12,56 @@ set clubQuery = craft.entries
 
 {% if country != '' %}
 
-{% set query = country %}
-{% set allEntries = craft.entries({
-clubQuery:query
-}).section('clubs').orderBy('clubName ASC').all() %}
-{% set allEntriesByCountry = allEntries %}
+
+    {% set allEntries = craft.entries.section('clubs').search(country).orderBy('clubCity asc') .all()%}
+
+    {% set allEntriesByCountry = allEntries %}
 
 
 {% else %}
 
-{% set allEntries = craft.entries.section('clubs').search(country).orderBy('clubName asc') .all()%}
-{% set allEntriesByCountry = allEntries  %}
+    {% set allEntries = craft.entries.section('clubs').search(country).orderBy('clubCity asc') .all()%}
+    {% set allEntriesByCountry = allEntries  %}
 
 {% endif  %}
 
 <div>
 
-    <button class="button" id="showModal">Add your club</button>
+    <div class="is-clearfix">
+        <div class="is-pulled-right">
+            <a class="button is-primary" id="showModal">
+                <span class="icon">
+                  <i class="fas fa-plus-square"></i>
+                </span>
+                    <span> Add your club</span>
+            </a>
+        </div>
+        <div class="is-pulled-left">
+            <div class="field is-narrow">
+                <div class="control">
+                    <div class="select">
+                        <select class="form-control" id="distSelectCountry"  onchange="countryChange(this);" style="color:#000;font-weight: bolder">
+                            <option value="" >{{"Filter By Country"|t}}</option>
+                            {% for entry in clubQuery %}
+                            <option value="{{entry}}" {% if entry==country %} selected {% endif  %}>{{ entry|t }}</option>
+                            {% endfor  %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="is-clearfix" style="clear: both">
+
     {% include '/clubs/form' %}
 
-    <!--
-    <select class="form-control" id="distSelectCountry"  onchange="countryChange(this);" style="color:#000;font-weight: bolder">
-        <option value="" >{{"Filter By Country"|t}}</option>
-        {% for entry in clubQuery %}
-        <option value="{{entry}}" {% if entry==country %} selected {% endif  %}>{{ entry|t }}</option>
-        {% endfor  %}
-    </select>
-    -->
 
-    {% paginate craft.entries.section('clubs') as items %}
+
+
 
     <articles>
-        {% for k, item in items %}
-        <article>
+        {% for k, item in allEntries %}
+        <article style="margin-top: 1rem">
             <a href="{{item.url}}">
 
                 <h4 class="title is-4 is-marginless">{{item.clubName}}</h4>
