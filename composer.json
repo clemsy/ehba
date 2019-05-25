@@ -3,6 +3,8 @@
     "craftcms/cms": "^3.0.0",
     "craftcms/guest-entries": "^2.2",
     "craftcms/redactor": "2.3.3.2",
+    "dolphiq/craft3-forms": "^1.1",
+    "lukeyouell/craft-countryselect": "1.1.2",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

@@ -1,4 +1,4 @@
-dateModified: 1558425038
+dateModified: 1558425256
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -6,6 +6,50 @@ email:
 fieldGroups:
   e5ba11ed-95e6-426a-9e9b-020223f63ceb:
     name: Common
+  051ca093-93be-4aaa-bd19-c2e7e102109e:
+    name: Section
+  d4a1ac80-6ab7-42cf-a5e5-8debf2d99853:
+    name: Page
+fields:
+  8e547dcc-758e-436b-9edf-db36de1fbe56:
+    name: 'Menu Title'
+    handle: sectionMenuTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+  c158205c-893c-4be5-b9e1-2d78f8d3d50b:
+    name: 'Section Title'
+    handle: sectionTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
@@ -55,4 +99,4 @@ users:
   defaultGroup: null
   photoVolumeUid: null
   photoSubpath: ''
-dateApplied: '2019-05-21 00:50:50'
+dateApplied: '2019-05-21 00:54:47'

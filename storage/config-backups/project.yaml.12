@@ -1,4 +1,4 @@
-dateModified: 1558425193
+dateModified: 1558425330
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -7,6 +7,8 @@ fieldGroups:
   e5ba11ed-95e6-426a-9e9b-020223f63ceb:
     name: Common
   051ca093-93be-4aaa-bd19-c2e7e102109e:
+    name: Section
+  d4a1ac80-6ab7-42cf-a5e5-8debf2d99853:
     name: Page
 fields:
   8e547dcc-758e-436b-9edf-db36de1fbe56:
@@ -43,6 +45,79 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+  3fdd3acb-b87d-42b4-b880-e3f57b932d9e:
+    name: 'Parent Section'
+    handle: pageParentSection
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
+  535c3737-a333-4f32-990c-1bb23ae0dc9f:
+    name: 'Page Menu Title'
+    handle: pageMenuTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
+  c7e1cd6b-26fe-4ec5-a98b-ff89fd05faa2:
+    name: 'Page Title'
+    handle: pageTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
+  e7b567cc-a9e7-4efb-be0f-49331a1d62f1:
+    name: 'Page Content'
+    handle: pageContent
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: ''
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
 plugins:
   redactor:
     edition: standard
@@ -97,4 +172,4 @@ users:
   defaultGroup: null
   photoVolumeUid: null
   photoSubpath: ''
-dateApplied: '2019-05-21 00:53:49'
+dateApplied: '2019-05-21 00:56:08'

@@ -1,1 +1,102 @@
-dateApplied: '2019-05-21 07:46:06'
+dateModified: 1558425243
+email:
+  fromEmail: clemsy@gmail.com
+  fromName: EHBA
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  e5ba11ed-95e6-426a-9e9b-020223f63ceb:
+    name: Common
+  051ca093-93be-4aaa-bd19-c2e7e102109e:
+    name: Page
+  d4a1ac80-6ab7-42cf-a5e5-8debf2d99853:
+    name: SectionSS
+fields:
+  8e547dcc-758e-436b-9edf-db36de1fbe56:
+    name: 'Menu Title'
+    handle: sectionMenuTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+  c158205c-893c-4be5-b9e1-2d78f8d3d50b:
+    name: 'Section Title'
+    handle: sectionTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+sections:
+  54727070-0b31-4417-82b8-24bad104a32f:
+    name: Sections
+    handle: sections
+    type: structure
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      ca2fd390-4a61-42c9-ba48-9f79c8bca295:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'sections/{slug}'
+        template: ''
+    structure:
+      uid: 575bc30e-fb2a-4af7-86f2-bd0ca0f00427
+      maxLevels: null
+    entryTypes:
+      c5f77853-a6a9-4907-87bc-541318e76b7c:
+        name: Sections
+        handle: sections
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: null
+        sortOrder: 1
+siteGroups:
+  e956e11c-2bae-4047-8092-901d67ddb85a:
+    name: EHBA
+sites:
+  ca2fd390-4a61-42c9-ba48-9f79c8bca295:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en
+    name: EHBA
+    primary: true
+    siteGroup: e956e11c-2bae-4047-8092-901d67ddb85a
+    sortOrder: 1
+system:
+  edition: solo
+  name: EHBA
+  live: true
+  schemaVersion: 3.1.28
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
+dateApplied: '2019-05-21 00:54:09'

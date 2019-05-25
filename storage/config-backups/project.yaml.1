@@ -1,4 +1,4 @@
-dateModified: 1558679688
+dateModified: 1558765766
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -362,6 +362,12 @@ fields:
     translationKeyFormat: null
     type: lukeyouell\countryselect\fields\CountrySelectField
     settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
       options:
         -
           value: AF
@@ -2054,8 +2060,8 @@ fields:
         -
           value: ZW
           label: Zimbabwe
-    contentColumnType: string
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: string
   fc351515-fa03-4176-9b31-06cd4d2737bd:
     name: 'Club City'
     handle: clubCity
@@ -2071,8 +2077,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   ddcedd6e-34fc-4323-a4ac-ccbaaa48a2c3:
     name: 'Club Name'
     handle: clubName
@@ -2088,8 +2094,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   c75d9f79-3579-4f73-bf61-1f13977590ad:
     name: 'Club Detail'
     handle: clubDetail
@@ -2105,8 +2111,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   060f5626-2ece-410e-8974-92dde2cef060:
     name: 'Club URL'
     handle: clubUrl
@@ -2122,8 +2128,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   b4de6383-5c74-41bf-8c9a-83073b308c5c:
     name: 'Club Logo'
     handle: clubLogo
@@ -2149,8 +2155,8 @@ fields:
       limit: ''
       selectionLabel: ''
       localizeRelations: false
-    contentColumnType: string
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: string
   ae48e9a4-fd9d-4172-a111-1ba40715b1da:
     name: 'Club Facebook URL'
     handle: clubFacebookUrl
@@ -2166,8 +2172,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   1d8b1e39-2a84-4a0b-b22c-fe695e81309c:
     name: 'Club Instagram Url'
     handle: clubInstagramUrl
@@ -2183,8 +2189,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   34caa0b0-e306-42a8-bfb5-d7673ee1f2a7:
     name: 'Club Contact Person'
     handle: clubContactPerson
@@ -2200,8 +2206,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
   2b8d7d66-b7fd-4503-8684-cd3583d2417c:
     name: 'Club Contact Email'
     handle: clubContactEmail
@@ -2217,8 +2223,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
+    contentColumnType: text
 imageTransforms:
   a7cb99c7-05d0-4d3f-b0f2-993354957546:
     format: null
@@ -2235,22 +2241,31 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  guest-entries:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+    settings:
+      enableCsrfProtection: ''
+      entryVariable: entry
+      sections:
+        81ca2ba3-590e-4124-aa39-0cbc70aea6a2:
+          sectionUid: 81ca2ba3-590e-4124-aa39-0cbc70aea6a2
+          allowGuestSubmissions: '1'
+          enabledByDefault: ''
+          runValidation: ''
+          authorUid: 758a9715-8e42-472a-8ef6-9c4bcf6095ea
+        59225f10-708f-475e-9c57-d97120360f09:
+          sectionUid: 59225f10-708f-475e-9c57-d97120360f09
+          allowGuestSubmissions: '1'
+          enabledByDefault: ''
+          runValidation: ''
+          authorUid: 758a9715-8e42-472a-8ef6-9c4bcf6095ea
   country-select:
-    edition: standard
-    enabled: true
     schemaVersion: 1.0.0
+    enabled: true
   dolphiq-craft3-forms:
-    edition: standard
-    enabled: true
     schemaVersion: 1.0.0
-routes:
-  9900a173-dc4a-4009-85c8-da8ca2c189fb:
-    template: news
-    uriParts:
-      - ehba/news
-    uriPattern: ehba/news
-    sortOrder: 1
-    siteUid: null
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
@@ -2494,19 +2509,13 @@ sections:
     type: channel
     enableVersioning: true
     propagateEntries: true
-    siteSettings:
-      ca2fd390-4a61-42c9-ba48-9f79c8bca295:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: 'clubs/{clubCountry}/{slug}'
-        template: ''
     entryTypes:
       a2128122-4ab9-4656-8cb3-ffc29620b41b:
         name: Clubs
         handle: club
         hasTitleField: false
         titleLabel: Title
-        titleFormat: '{slug}'
+        titleFormat: '{clubCountry}-{clubName}'
         sortOrder: 1
         fieldLayouts:
           946c1272-7dc2-4717-a873-86708104a38a:
@@ -2516,13 +2525,13 @@ sections:
                 sortOrder: 1
                 fields:
                   ddcedd6e-34fc-4323-a4ac-ccbaaa48a2c3:
-                    required: false
+                    required: true
                     sortOrder: 1
                   fc351515-fa03-4176-9b31-06cd4d2737bd:
-                    required: false
+                    required: true
                     sortOrder: 2
                   5054c845-30b8-4287-a8c7-d377a0dc7d35:
-                    required: false
+                    required: true
                     sortOrder: 3
                   c75d9f79-3579-4f73-bf61-1f13977590ad:
                     required: false
@@ -2548,11 +2557,17 @@ sections:
                 sortOrder: 3
                 fields:
                   34caa0b0-e306-42a8-bfb5-d7673ee1f2a7:
-                    required: false
+                    required: true
                     sortOrder: 1
                   2b8d7d66-b7fd-4503-8684-cd3583d2417c:
-                    required: false
+                    required: true
                     sortOrder: 2
+    siteSettings:
+      ca2fd390-4a61-42c9-ba48-9f79c8bca295:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'clubs/{clubCountry}/{slug}'
+        template: ''
 siteGroups:
   e956e11c-2bae-4047-8092-901d67ddb85a:
     name: EHBA
@@ -2637,4 +2652,4 @@ volumes:
     settings:
       path: '@webroot/assets/clubs'
     sortOrder: 6
-dateApplied: '2019-05-24 22:23:57'
+dateApplied: '2019-05-25 08:32:40'

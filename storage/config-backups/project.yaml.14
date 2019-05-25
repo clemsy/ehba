@@ -1,4 +1,4 @@
-dateModified: 1558425077
+dateModified: 1558425302
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -7,6 +7,8 @@ fieldGroups:
   e5ba11ed-95e6-426a-9e9b-020223f63ceb:
     name: Common
   051ca093-93be-4aaa-bd19-c2e7e102109e:
+    name: Section
+  d4a1ac80-6ab7-42cf-a5e5-8debf2d99853:
     name: Page
 fields:
   8e547dcc-758e-436b-9edf-db36de1fbe56:
@@ -26,6 +28,63 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+  c158205c-893c-4be5-b9e1-2d78f8d3d50b:
+    name: 'Section Title'
+    handle: sectionTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 051ca093-93be-4aaa-bd19-c2e7e102109e
+  3fdd3acb-b87d-42b4-b880-e3f57b932d9e:
+    name: 'Parent Section'
+    handle: pageParentSection
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
+  535c3737-a333-4f32-990c-1bb23ae0dc9f:
+    name: 'Page Menu Title'
+    handle: pageMenuTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: d4a1ac80-6ab7-42cf-a5e5-8debf2d99853
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
@@ -75,4 +134,4 @@ users:
   defaultGroup: null
   photoVolumeUid: null
   photoSubpath: ''
-dateApplied: '2019-05-21 00:51:27'
+dateApplied: '2019-05-21 00:55:11'

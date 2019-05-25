@@ -40,10 +40,18 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
             'yii\\' => 4,
             'yii2tech\\ar\\softdelete\\' => 23,
         ),
+        'p' => 
+        array (
+            'plugins\\dolphiq\\form\\' => 21,
+        ),
         'm' => 
         array (
             'modules\\' => 8,
             'mikehaertl\\shellcommand\\' => 24,
+        ),
+        'l' => 
+        array (
+            'lukeyouell\\countryselect\\' => 25,
         ),
         'e' => 
         array (
@@ -187,6 +195,10 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
         array (
             0 => __DIR__ . '/..' . '/yii2tech/ar-softdelete/src',
         ),
+        'plugins\\dolphiq\\form\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dolphiq/craft3-forms/src',
+        ),
         'modules\\' => 
         array (
             0 => __DIR__ . '/../..' . '/modules',
@@ -194,6 +206,10 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
         'mikehaertl\\shellcommand\\' => 
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
+        'lukeyouell\\countryselect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lukeyouell/craft-countryselect/src',
         ),
         'enshrined\\svgSanitize\\' => 
         array (
@@ -2790,8 +2806,21 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
         'enshrined\\svgSanitize\\data\\AllowedTags' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AllowedTags.php',
         'enshrined\\svgSanitize\\data\\AttributeInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/AttributeInterface.php',
         'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
+        'lukeyouell\\countryselect\\CountrySelect' => __DIR__ . '/..' . '/lukeyouell/craft-countryselect/src/CountrySelect.php',
+        'lukeyouell\\countryselect\\fields\\CountrySelectBaseOptionsField' => __DIR__ . '/..' . '/lukeyouell/craft-countryselect/src/fields/CountrySelectBaseOptionsField.php',
+        'lukeyouell\\countryselect\\fields\\CountrySelectField' => __DIR__ . '/..' . '/lukeyouell/craft-countryselect/src/fields/CountrySelectField.php',
+        'lukeyouell\\countryselect\\fields\\CountrySelectMultiField' => __DIR__ . '/..' . '/lukeyouell/craft-countryselect/src/fields/CountrySelectMultiField.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
         'modules\\Module' => __DIR__ . '/../..' . '/modules/Module.php',
+        'plugins\\dolphiq\\form\\Plugin' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/Plugin.php',
+        'plugins\\dolphiq\\form\\assets\\pjaxAsset' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/assets/pjaxAsset.php',
+        'plugins\\dolphiq\\form\\controllers\\MainController' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/controllers/MainController.php',
+        'plugins\\dolphiq\\form\\migrations\\Install' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/migrations/Install.php',
+        'plugins\\dolphiq\\form\\models\\Form' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/models/Form.php',
+        'plugins\\dolphiq\\form\\models\\FormSettings' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/models/FormSettings.php',
+        'plugins\\dolphiq\\form\\models\\Settings' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/models/Settings.php',
+        'plugins\\dolphiq\\form\\models\\log' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/models/Log.php',
+        'plugins\\dolphiq\\form\\twigextensions\\YiiTwigExtension' => __DIR__ . '/..' . '/dolphiq/craft3-forms/src/twigextensions/YiiTwigExtension.php',
         'yii2tech\\ar\\softdelete\\SoftDeleteBehavior' => __DIR__ . '/..' . '/yii2tech/ar-softdelete/src/SoftDeleteBehavior.php',
         'yii2tech\\ar\\softdelete\\SoftDeleteQueryBehavior' => __DIR__ . '/..' . '/yii2tech/ar-softdelete/src/SoftDeleteQueryBehavior.php',
         'yii\\BaseYii' => __DIR__ . '/..' . '/yiisoft/yii2/BaseYii.php',

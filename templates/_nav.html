@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     {% else %}
-                    <div class="navbar-item {{ page.id == entry.id ? 'is-active' }}">
+                    <div class="navbar-item {% if entry is defined %} {{ page.id == entry.id ? 'is-active' }} {%endif%}">
                         <a class="" href="{{ page.getUrl() }}">
                             <span>{{ page.pageMenuTitle }}</span>
                         </a>

@@ -1,0 +1,40 @@
+{% extends "/basic" %}
+
+
+{% set pageTitle = entry.clubName %}
+{% block content %}
+
+<article>
+
+    {% if entry.clubLogo.one() %}
+    <div class="card is-pulled-left" style="margin:0 1rem 1rem 0">
+        <img src="{{ entry.clubLogo.one().getUrl()|replace({'clm': 'ovh'}) }}" class=" card" style="width: 200px;">
+    </div>
+    {% endif %}
+
+        <h1 class="title is-4 is-marginless">{{entry.clubName}}</h1>
+    
+    <div>
+            {{entry.clubCity}} {{entry.clubCountry}}
+            <ul>
+                <li>
+                    {{entry.clubUrl}}
+                </li>
+                <li>
+                    {{entry.clubFacebookUrl}}
+                </li>
+                <li>
+                    {{entry.clubInstagramUrl}}
+                </li>
+            </ul>
+
+            Contact person : {{entry.clubContactPerson}} : {{entry.clubContactEmail}}
+            <hr>
+            <div class="content">
+                {{entry.clubDetail}}
+            </div>
+        </div>
+    
+</article>
+
+{% endblock %}

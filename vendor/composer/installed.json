@@ -974,6 +974,69 @@
         ]
     },
     {
+        "name": "dolphiq/craft3-forms",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Dolphiq/craft3-forms.git",
+            "reference": "b56ca4a4d8bb2b851bdc2669671a08529ea1cd92"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Dolphiq/craft3-forms/zipball/b56ca4a4d8bb2b851bdc2669671a08529ea1cd92",
+            "reference": "b56ca4a4d8bb2b851bdc2669671a08529ea1cd92",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0-beta.20"
+        },
+        "time": "2018-08-06T07:15:46+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "handle": "dolphiq-craft3-forms",
+            "name": "Forms",
+            "description": "Craft form plugin that will let you use forms as you would when using the Yii 2 Framework",
+            "schemaVersion": "1.0.0",
+            "developer": "Dolphiq",
+            "developerUrl": "https://dolphiq.nl/",
+            "hasCpSettings": true,
+            "hasCpSection": false,
+            "documentationUrl": "https://github.com/Dolphiq/craft3-forms/blob/master/README.md",
+            "changelogUrl": "https://raw.githubusercontent.com/Dolphiq/craft3-forms/master/CHANGELOG.md"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "plugins\\dolphiq\\form\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dolphiq",
+                "email": "info@dolphiq.nl",
+                "homepage": "https://dolphiq.nl/"
+            }
+        ],
+        "description": "Craft 3 formulieren",
+        "keywords": [
+            "Craft",
+            "Forms",
+            "cms",
+            "craft-plugin",
+            "craft3",
+            "craftcms",
+            "form",
+            "plugin",
+            "yii",
+            "yii2"
+        ]
+    },
+    {
         "name": "egulias/email-validator",
         "version": "2.1.8",
         "version_normalized": "2.1.8.0",
@@ -1571,6 +1634,62 @@
             "oauth2",
             "single sign on"
         ]
+    },
+    {
+        "name": "lukeyouell/craft-countryselect",
+        "version": "1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lukeyouell/craft-countryselect.git",
+            "reference": "a903aa3a2a109354a0c69b6c08e86aeb52f8b74e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lukeyouell/craft-countryselect/zipball/a903aa3a2a109354a0c69b6c08e86aeb52f8b74e",
+            "reference": "a903aa3a2a109354a0c69b6c08e86aeb52f8b74e",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.0.0"
+        },
+        "time": "2018-04-16T09:24:50+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "Country Select",
+            "handle": "country-select",
+            "hasCpSettings": false,
+            "hasCpSection": false,
+            "changelogUrl": "https://raw.githubusercontent.com/lukeyouell/craft-countryselect/v1/CHANGELOG.md",
+            "class": "lukeyouell\\countryselect\\CountrySelect"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "lukeyouell\\countryselect\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Luke Youell",
+                "homepage": "https://github.com/lukeyouell"
+            }
+        ],
+        "description": "Country select field type.",
+        "keywords": [
+            "cms",
+            "country select",
+            "craft",
+            "craft-plugin",
+            "craftcms"
+        ],
+        "support": {
+            "docs": "https://github.com/lukeyouell/craft-countryselect/blob/v1/README.md",
+            "issues": "https://github.com/lukeyouell/craft-countryselect/issues"
+        }
     },
     {
         "name": "mikehaertl/php-shellcommand",
