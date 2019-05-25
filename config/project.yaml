@@ -1,4 +1,4 @@
-dateModified: 1558768564
+dateModified: 1558780928
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -754,6 +754,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  craft-emailobfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections

@@ -28,7 +28,9 @@
                 </li>
             </ul>
 
-            Contact person : {{entry.clubContactPerson}} : {{entry.clubContactEmail}}
+            Contact person : {{entry.clubContactPerson}}
+            <br>
+            Contact Email: {{entry.clubContactEmail|obfuscateEmail}}
             <hr>
             <div class="content">
                 {{entry.clubDetail}}
