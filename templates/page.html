@@ -19,7 +19,7 @@
 
         {% if entry.pageBanner.one() %}
         <div class="is-hidden is-fullwidth" style="">
-            <img src="{{ entry.pageBanner.one().getUrl() }}" class=" card" style="width: 100%;">
+            <img src="{{ entry.pageBanner.one().getUrl()|replace({'clm': 'ovh'}) }}" class=" card" style="width: 100%;">
         </div>
         {% endif %}
 
@@ -39,7 +39,7 @@
                 <div class="card-image">
                     <figure class="image">
                         <a href="{{ asset.getUrl() }}" data-title="{{asset.title}}" data-toggle="lightbox" data-gallery="example-gallery" class="" data-lightbox="gallery">
-                            <img src="{{ asset.getUrl('tn') }}" width="{{ asset.getWidth('tn') }}" height="{{ asset.getHeight('tn') }}" style="max-width:{{ asset.getWidth('tn') }}px">
+                            <img src="{{ asset.getUrl('tn')|replace({'clm': 'ovh'}) }}" width="{{ asset.getWidth('tn') }}" height="{{ asset.getHeight('tn') }}" style="max-width:{{ asset.getWidth('tn') }}px">
                         </a>
                     </figure>
                 </div>

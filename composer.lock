@@ -4,8 +4,101 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5fe6fa326e352d711b80a2b4f827483",
+    "content-hash": "eede103f67457f7c119997f9892a64f0",
     "packages": [
+        {
+            "name": "apt/craft-countries",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git1.apt.no/open/craft-countries.git",
+                "reference": "ea28fc63aeb28618b279c254b9ec213734ecb78c"
+            },
+            "require": {
+                "apt/craft-countries-module": "^1.0",
+                "craftcms/cms": "3.*"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Country Fields",
+                "handle": "country-fields",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://git1.apt.no/open/craft-countries/blob/master/CHANGELOG.md",
+                "class": "apt\\craftcountries\\CraftCountries"
+            },
+            "autoload": {
+                "psr-4": {
+                    "apt\\craftcountries\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Sømoen",
+                    "homepage": "https://apt.no/"
+                }
+            ],
+            "description": "Add country select, and multiselct field to admin",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft countries",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://git1.apt.no/open/craft-countries/blob/master/README.md",
+                "issues": "https://git1.apt.no/open/craft-countries/issues"
+            },
+            "time": "2019-02-13T08:10:42+00:00"
+        },
+        {
+            "name": "apt/craft-countries-module",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://git1.apt.no/open/craft-countries-module.git",
+                "reference": "720d31bcd7fc68d646e44631900d05dffcac26bd"
+            },
+            "require": {
+                "craftcms/cms": "3.*"
+            },
+            "type": "craft-module",
+            "extra": {
+                "name": "Craft Countries Module",
+                "handle": "craft-countries-module",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://git1.apt.no/open/craft-countries-modules/craft-countries-modules/blob/master/CHANGELOG.md",
+                "class": "apt\\craftcountriesmodule\\CraftCountriesModule"
+            },
+            "autoload": {
+                "psr-4": {
+                    "apt\\craftcountriesmodule\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Sømoen",
+                    "homepage": "https://apt.no/"
+                }
+            ],
+            "description": "Add list of countries",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft countries",
+                "craft-module",
+                "craftcms"
+            ],
+            "time": "2019-02-13T08:12:53+00:00"
+        },
         {
             "name": "bower-asset/inputmask",
             "version": "3.3.11",

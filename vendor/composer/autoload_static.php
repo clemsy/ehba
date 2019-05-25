@@ -67,6 +67,11 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
             'craft\\' => 6,
             'cebe\\markdown\\' => 14,
         ),
+        'a' => 
+        array (
+            'apt\\craftcountriesmodule\\' => 25,
+            'apt\\craftcountries\\' => 19,
+        ),
         'Z' => 
         array (
             'Zend\\Stdlib\\' => 12,
@@ -242,6 +247,14 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
+        ),
+        'apt\\craftcountriesmodule\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/apt/craft-countries-module/src',
+        ),
+        'apt\\craftcountries\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/apt/craft-countries/src',
         ),
         'Zend\\Stdlib\\' => 
         array (
@@ -1946,6 +1959,16 @@ class ComposerStaticInitfc9d80ae70aaa4a5e8ecb70f32c3be06
         'Zend\\Stdlib\\StringWrapper\\MbString' => __DIR__ . '/..' . '/zendframework/zend-stdlib/src/StringWrapper/MbString.php',
         'Zend\\Stdlib\\StringWrapper\\Native' => __DIR__ . '/..' . '/zendframework/zend-stdlib/src/StringWrapper/Native.php',
         'Zend\\Stdlib\\StringWrapper\\StringWrapperInterface' => __DIR__ . '/..' . '/zendframework/zend-stdlib/src/StringWrapper/StringWrapperInterface.php',
+        'apt\\craftcountries\\CraftCountries' => __DIR__ . '/..' . '/apt/craft-countries/src/CraftCountries.php',
+        'apt\\craftcountries\\assetbundles\\countriesfield\\CountriesFieldAsset' => __DIR__ . '/..' . '/apt/craft-countries/src/assetbundles/countriesfield/CountriesFieldAsset.php',
+        'apt\\craftcountries\\fields\\Countries' => __DIR__ . '/..' . '/apt/craft-countries/src/fields/Countries.php',
+        'apt\\craftcountries\\fields\\Country' => __DIR__ . '/..' . '/apt/craft-countries/src/fields/Country.php',
+        'apt\\craftcountriesmodule\\CraftCountriesModule' => __DIR__ . '/..' . '/apt/craft-countries-module/src/CraftCountriesModule.php',
+        'apt\\craftcountriesmodule\\models\\Country' => __DIR__ . '/..' . '/apt/craft-countries-module/src/models/Country.php',
+        'apt\\craftcountriesmodule\\services\\Service' => __DIR__ . '/..' . '/apt/craft-countries-module/src/services/Service.php',
+        'apt\\craftcountriesmodule\\utils\\Countries' => __DIR__ . '/..' . '/apt/craft-countries-module/src/utils/Countries.php',
+        'apt\\craftcountriesmodule\\validators\\CountryValidator' => __DIR__ . '/..' . '/apt/craft-countries-module/src/validators/CountryValidator.php',
+        'apt\\craftcountriesmodule\\variables\\CraftCountriesModuleVariable' => __DIR__ . '/..' . '/apt/craft-countries-module/src/variables/CraftCountriesModuleVariable.php',
         'cebe\\markdown\\GithubMarkdown' => __DIR__ . '/..' . '/cebe/markdown/GithubMarkdown.php',
         'cebe\\markdown\\Markdown' => __DIR__ . '/..' . '/cebe/markdown/Markdown.php',
         'cebe\\markdown\\MarkdownExtra' => __DIR__ . '/..' . '/cebe/markdown/MarkdownExtra.php',

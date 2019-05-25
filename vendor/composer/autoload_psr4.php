@@ -33,6 +33,8 @@ return array(
     'craft\\composer\\' => array($vendorDir . '/craftcms/plugin-installer/src'),
     'craft\\' => array($vendorDir . '/craftcms/cms/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'apt\\craftcountriesmodule\\' => array($vendorDir . '/apt/craft-countries-module/src'),
+    'apt\\craftcountries\\' => array($vendorDir . '/apt/craft-countries/src'),
     'Zend\\Stdlib\\' => array($vendorDir . '/zendframework/zend-stdlib/src'),
     'Zend\\Feed\\' => array($vendorDir . '/zendframework/zend-feed/src'),
     'Zend\\Escaper\\' => array($vendorDir . '/zendframework/zend-escaper/src'),

@@ -1,90 +1,136 @@
-{% extends "/basic" %}
+<div id="image-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="modal-card">
+            <section class="modal-card-body">
 
-{% block content %}
+                {% macro errorList(errors) %}
+                {% if errors %}
+                <ul class="errors">
+                    {% for error in errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endmacro %}
 
-{% macro errorList(errors) %}
-{% if errors %}
-<ul class="errors">
-    {% for error in errors %}
-    <li>{{ error }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endmacro %}
+                {% if entry.errors is defined %}
+                {% for errorField, error in entry.errors %}
+                {% for errorMessage in error %}
+                <ul class="form-errors">
+                    <li>{{ errorField }} - {{ errorMessage }}</li>
+                </ul>
+                {% endfor %}
+                {% endfor %}
+                {% endif %}
 
-{% if entry.errors is defined %}
-{% for errorField, error in entry.errors %}
-{% for errorMessage in error %}
-<ul class="form-errors">
-    <li>{{ errorField }} - {{ errorMessage }}</li>
-</ul>
-{% endfor %}
-{% endfor %}
-{% endif %}
+                {% from _self import errorList %}
 
-{% from _self import errorList %}
-
-<form method="post" action="?" accept-charset="UTF-8">
-    {{ csrfInput() }}
-    <input type="hidden" name="action" value="guest-entries/save">
-    <input type="hidden" name="sectionUid" value="59225f10-708f-475e-9c57-d97120360f09">
-    {{ redirectInput('success') }}
-    <input id="slug" type="hidden" name="slug" {%- if entry is defined %} value="{{ entry.slug }}"{%else%} value="{{'now'|date('U') }}"{% endif %}>
+                <form method="post" action="?" accept-charset="UTF-8">
+                    {{ csrfInput() }}
+                    <input type="hidden" name="action" value="guest-entries/save">
+                    <input type="hidden" name="sectionUid" value="59225f10-708f-475e-9c57-d97120360f09">
+                    {{ redirectInput('success') }}
+                    <input id="slug" type="hidden" name="slug" {%- if entry is defined %} value="{{ entry.slug }}"{%else%} value="{{'now'|date('U') }}"{% endif %}>
 
 
-    <div class="field is-horizontal">
-        <div class="field-label is-normal">
-            <label class="label" for="clubName">Club Name</label>
-        </div>
-        <div class="field-body">
-            <div class="field">
-                <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" placeholder="Club Name" id="clubName" name="fields[clubName]" {%- if entry is defined %} value="{{ entry.clubName }}"{% endif %}>
-                </p>
-            </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="clubName">Club Name</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="Club Name" id="clubName" name="fields[clubName]" {%- if entry is defined %} value="{{ entry.clubName }}"{% endif %}>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% if entry is defined %}
+                    <p class="help is-danger">
+                        {{ errorList(entry.getErrors('clubName')) }}
+                    </p>
+                    {% endif %}
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="clubCity">City</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="City" id="clubCity" name="fields[clubCity]" {%- if entry is defined %} value="{{ entry.clubCity }}"{% endif %}>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% if entry is defined %}
+                    <p class="help is-danger">
+                        {{ errorList(entry.getErrors('clubCity')) }}
+                    </p>
+                    {% endif %}
+
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="clubCountry">Country</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select name="fields[clubCountry]" id="clubCountry">
+                                            <option>Select country</option>
+                                            {% for country in craft.countries.list %}
+                                            <option value="{{ country.code }}">{{ country.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="clubDetail">Club Info</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" id="clubDetail" name="fields[clubDetail]" placeholder="Club info, trainings, ...">{%- if entry is defined %}{{ entry.clubDetail }}{% endif -%}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if entry is defined %}
+                    <p class="help is-danger">
+                        {{ errorList(entry.getErrors('clubName')) }}
+                    </p>
+                    {% endif %}
+
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <!-- Left empty for spacing -->
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control has-text-right">
+                                    <button type="submit" class="button is-primary">
+                                        Send application
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                            </section>
+
         </div>
     </div>
+    <button id="image-modal-close" class="modal-close"></button>
+</div>
 
-    {% if entry is defined %}
-    <p class="help is-danger">
-        {{ errorList(entry.getErrors('clubName')) }}
-    </p>
-    {% endif %}
-
-
-
-    <div class="field is-horizontal">
-        <div class="field-label is-normal">
-            <label class="label" for="clubDetail">Club Info</label>
-        </div>
-        <div class="field-body">
-            <div class="field">
-                <div class="control">
-                    <textarea class="textarea" id="clubDetail" name="fields[clubDetail]" placeholder="Club info, trainings, ...">{%- if entry is defined %}{{ entry.clubDetail }}{% endif -%}</textarea>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% if entry is defined %}
-    <p class="help is-danger">
-        {{ errorList(entry.getErrors('clubName')) }}
-    </p>
-    {% endif %}
-
-    <div class="field is-horizontal">
-        <div class="field-label">
-            <!-- Left empty for spacing -->
-        </div>
-        <div class="field-body">
-            <div class="field">
-                <div class="control">
-                    <button type="submit" class="button is-primary">
-                        Send application
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</form>
-{% endblock content %}

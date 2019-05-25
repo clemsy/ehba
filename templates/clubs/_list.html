@@ -28,6 +28,9 @@ clubQuery:query
 
 <div>
 
+    <button class="button" id="showModal">Add your club</button>
+    {% include '/clubs/form' %}
+
     <!--
     <select class="form-control" id="distSelectCountry"  onchange="countryChange(this);" style="color:#000;font-weight: bolder">
         <option value="" >{{"Filter By Country"|t}}</option>
@@ -62,4 +65,14 @@ clubQuery:query
         var selectValue=selectObj.options[selectIndex].value;
         window.location.href =  '{{ url('ehba/clubs') }}?country=' + selectValue  ;
     }
+    var btn = document.querySelector('#showModal');
+    var modalDlg = document.querySelector('#image-modal');
+    var imageModalCloseBtn = document.querySelector('#image-modal-close');
+    btn.addEventListener('click', function(){
+        modalDlg.classList.add('is-active');
+    });
+
+    imageModalCloseBtn.addEventListener('click', function(){
+        modalDlg.classList.remove('is-active');
+    });
 </script>

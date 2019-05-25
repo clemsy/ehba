@@ -77,4 +77,23 @@ return array (
     'changelogUrl' => 'https://raw.githubusercontent.com/craftcms/guest-entries/v2/CHANGELOG.md',
     'downloadUrl' => 'https://github.com/craftcms/guest-entries/archive/v2.zip',
   ),
+  'apt/craft-countries' => 
+  array (
+    'class' => 'apt\\craftcountries\\CraftCountries',
+    'basePath' => $vendorDir . '/apt/craft-countries/src',
+    'handle' => 'country-fields',
+    'aliases' => 
+    array (
+      '@apt/craftcountries' => $vendorDir . '/apt/craft-countries/src',
+    ),
+    'name' => 'Country Fields',
+    'version' => '1.0.2',
+    'description' => 'Add country select, and multiselct field to admin',
+    'developer' => 'Thomas Sømoen',
+    'developerUrl' => 'https://apt.no/',
+    'documentationUrl' => 'https://git1.apt.no/open/craft-countries/blob/master/README.md',
+    'changelogUrl' => 'https://git1.apt.no/open/craft-countries/blob/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => false,
+  ),
 );

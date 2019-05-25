@@ -1,5 +1,6 @@
 {
   "require": {
+    "apt/craft-countries": "^1.0",
     "craftcms/cms": "^3.0.0",
     "craftcms/guest-entries": "^2.2",
     "craftcms/redactor": "2.3.3.2",
@@ -23,5 +24,18 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
-  }
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://git1.apt.no/open/craft-countries-module.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://git1.apt.no/open/craft-countries.git"
+    }
+  ]
+
+
 }
