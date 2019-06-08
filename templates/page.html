@@ -21,9 +21,11 @@
         {% endif %}
 
 
+        {% if entry.slug!='home-page' %}
         <h1 class="title is-2">
             {{entry.sectionTitle}}
         </h1>
+        {% endif %}
 
         <div class="content has-text-left">
             {{entry.pageContent}}

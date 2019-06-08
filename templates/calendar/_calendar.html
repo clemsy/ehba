@@ -6,11 +6,11 @@
                 <li>
                     <a href="{{item.url}}">
                         <div class="columns">
-                            {% if item.eventPoster.one() %}
-                            <div class="column is-2" style="">
+                            {# if item.eventPoster.one() %}
+                            <div class="column is-2 is-hidden" style="">
                                 <img src="{{ item.eventPoster.one().getUrl() }}" class=" card" style="width: 200px;">
                             </div>
-                            {% endif %}
+                            {% endif #}
                             <div class="column auto">
                                 <h4 class="title is-4">{{item.eventTitle}}
                                     - {{item.eventCity}} ({{item.eventCountry}})

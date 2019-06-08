@@ -6,12 +6,29 @@
 {% block content %}
 <div class="">
     <div class="page-content">
+
+        {% if item.pageBanner.one() %}
+        <div class=" is-fullwidth" style="">
+            <img src="{{ item.pageBanner.one().getUrl('banner')|replace({'clm': 'ovh'}) }}" class="" style="width: 100%;">
+        </div>
+        {% endif %}
+
         <h1 class="title is-2 is-marginless">
             {{ item.eventTitle }}
         </h1>
-        <p>
-            Event detail to be implemented...
-        </p>
+        <h2 class="title is-4 is-marginless">
+            {{item.eventCity}} ({{item.eventCountry}})
+            - {{item.eventDateFrom|date('short', timezone='UTC', locale='en')}} to  {{item.eventDateTo|date('short', timezone='UTC', locale='en')}}</h2>
+
+        <div class="column auto">
+            <br>
+            Location :
+            {{item.eventLocation}}
+            <br>
+            <div class="content">
+                {{item.eventDetail}}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
