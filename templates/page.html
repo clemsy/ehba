@@ -33,6 +33,7 @@
 
 
         <!-- Start Carousel -->
+        {#
         {% set pictures = entry.pageAssets.all() %}
         {% if pictures|length %}
         <hr>
@@ -51,6 +52,7 @@
             {% endfor %}
         </div>
         {% endif %}
+        #}
         <!-- End Carousel -->
 
         {% set assets = entry.documents.all() %}
@@ -58,7 +60,7 @@
         <hr>
 
         <section class="">
-            <h3 class="title is-5 has-no-bm">Files :</h3>
+            <h3 class="title is-5 has-no-bm">Downloads :</h3>
             <ul class=" list-files">
                 {% for k, asset in assets %}
                 <li class="">
