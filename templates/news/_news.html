@@ -6,17 +6,17 @@
                 {% for k, item in items %}
                 <li>
                     <a href="{{item.url}}">
-                        <h4 class="title is-4">{{item.newsTitle}}</h4>
+                        <h4 class="title is-4 is-marginless">{{item.newsTitle}}</h4>
                         <span>posted on {{item.newsDate|date('long', timezone='UTC', locale='en')}}</span>
                         <div class="columns">
 
-                            {% if item.pageBanner.one() %}
+                            {# if item.pageBanner.one() %}
                             <div class="column is-2" style="">
                                 <img src="{{ item.pageBanner.one().getUrl() }}" class=" card" style="width: 200px;">
                             </div>
-                            {% endif %}
-                            <div class="column auto">
-                                {{item.newsSummary}}
+                            {% endif #}
+                            <div class="column auto" style="padding:1rem 0">
+                                {{item.newsBody}}
                             </div>
                         </div>
                         <div>
@@ -28,6 +28,7 @@
                             </h3>
                         </div>
                     </a>
+                    <hr>
                 </li>
                 {% endfor %}
             </ul>

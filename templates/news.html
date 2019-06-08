@@ -24,11 +24,11 @@
                     <span>posted on {{item.newsDate|date('long', timezone='UTC', locale='en')}}</span>
                     <div class="columns">
 
-                        {% if item.pageBanner.one() %}
-                        <div class="column is-2" style="">
+                        {# if item.pageBanner.one() %}
+                        <div class="column is-2 is-hidden" style="">
                             <img src="{{ item.pageBanner.one().getUrl() }}" class=" card" style="width: 200px;">
                         </div>
-                        {% endif %}
+                        {% endif #}
                         <div class="column auto">
                             {{item.newsSummary}}
                         </div>
