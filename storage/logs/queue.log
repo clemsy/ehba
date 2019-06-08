@@ -17387,3 +17387,1977 @@ FROM `craft_queue`
 WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1558765968 - `delay`)
 ORDER BY `priority`, `id`
 LIMIT 1
+2019-05-29 13:44:03 [-][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:03 [-][1][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:03 [-][1][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:03 [-][1][-][info][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:03 [-][1][-][profile begin][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:03 [-][1][-][profile end][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:03 [-][1][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:03 [-][1][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:03 [-][1][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:03 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:03 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][info][yii\web\Session::open] Session started
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:04 [-][1][-][trace][yii\base\Module::getModule] Loading module: countries
+2019-05-29 13:44:04 [-][1][-][info][apt\craftcountriesmodule\CraftCountriesModule::init] Craft Countries Module module loaded
+2019-05-29 13:44:04 [-][1][-][info][apt\craftcountries\CraftCountries::init] Country Fields plugin loaded
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:04 [-][1][-][info][lucasbares\craftemailobfuscator\CraftEmailobfuscator::init] Craft Emailobfuscator plugin loaded
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:04' WHERE `id`='41'
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:04' WHERE `id`='41'
+2019-05-29 13:44:04 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:04' WHERE `id`='41'
+2019-05-29 13:44:04 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:04 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:05 [-][1][-][trace][craft\web\Application::_processActionRequest] Route requested: 'queue/run'
+2019-05-29 13:44:05 [-][1][-][trace][yii\base\Controller::runAction] Route to run: queue/run
+2019-05-29 13:44:05 [-][1][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\QueueController::actionRun()
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130245 - `ttr`
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130245 - `ttr`
+2019-05-29 13:44:05 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130245 - `ttr`
+2019-05-29 13:44:05 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:05 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130246 - `ttr`
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130246 - `ttr`
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130246 - `ttr`
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130246))
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130246))
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130246))
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130246 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130246 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130246 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:06', `timeUpdated`=1559130246, `attempt`=1 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:06', `timeUpdated`=1559130246, `attempt`=1 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:06', `timeUpdated`=1559130246, `attempt`=1 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [18] Updating element slugs and URIs (attempt: 1) - Started
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130246 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130246 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130246 WHERE `id`='18'
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:06 [-][1][-][profile end][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:06 [-][1][-][profile begin][craft\web\twig\Environment::compileSource] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:06 [-][1][-][profile end][craft\web\twig\Environment::compileSource] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:06 [-][1][-][info][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:06 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:07 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:07 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:07 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:07 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:07 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:07' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:07 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:07' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:07 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:07' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [18] Updating element slugs and URIs (attempt: 1) - Done (time: 1.639s)
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='18'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='18'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='18'
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130248 - `ttr`
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130248 - `ttr`
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130248 - `ttr`
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:08', `timeUpdated`=1559130248, `attempt`=1 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:08', `timeUpdated`=1559130248, `attempt`=1 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:08', `timeUpdated`=1559130248, `attempt`=1 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [19] Updating element slugs and URIs (attempt: 1) - Started
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130248 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130248 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130248 WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:08 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:08 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:08 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:08' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:08' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:08' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:08 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [19] Updating element slugs and URIs (attempt: 1) - Done (time: 0.172s)
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='19'
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130248 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=51.83.44.51;dbname=hbp;port=3306;
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SHOW TABLES
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `craft_sites` `s`
+INNER JOIN `craft_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-05-29 13:44:08 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:08 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_info`
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][info][yii\web\Session::open] Session started
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT `preferences`
+FROM `craft_userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `craft_plugins`
+2019-05-29 13:44:09 [-][1][-][trace][yii\base\Module::getModule] Loading module: countries
+2019-05-29 13:44:09 [-][1][-][info][apt\craftcountriesmodule\CraftCountriesModule::init] Craft Countries Module module loaded
+2019-05-29 13:44:09 [-][1][-][info][apt\craftcountries\CraftCountries::init] Country Fields plugin loaded
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_resourcepaths`
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_resourcepaths' AND kcu.table_name = 'craft_resourcepaths'
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'craft_resourcepaths' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'craft_resourcepaths'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'craft_resourcepaths' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'craft_resourcepaths'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `craft_resourcepaths` (`path`, `hash`) VALUES ('@vendor/propaganistas/email-obfuscator/assets', '902c2532') ON DUPLICATE KEY UPDATE `path`='@vendor/propaganistas/email-obfuscator/assets'
+2019-05-29 13:44:09 [-][1][-][info][lucasbares\craftemailobfuscator\CraftEmailobfuscator::init] Craft Emailobfuscator plugin loaded
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT `id`
+FROM `craft_sessions`
+WHERE (`token`='KyIJA0ZEWWjRj9vv6t5cDSchObDDK8w5CPPjEXnKIpZCV17gPfn5Suv-QVIZhmxJKpNzcqiP8YBVPClmYssZOjdARTAYLTgaiV3r') AND (`userId`='1')
+LIMIT 1
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_sessions`
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:09 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:09 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:09 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_sessions' AND kcu.table_name = 'craft_sessions'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:09' WHERE `id`='41'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:09' WHERE `id`='41'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_sessions` SET `dateUpdated`='2019-05-29 11:44:09' WHERE `id`='41'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `craft_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`='1') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `craft_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-05-29 13:44:10 [-][1][-][trace][craft\web\Application::_processActionRequest] Route requested: 'queue/run'
+2019-05-29 13:44:10 [-][1][-][trace][yii\base\Controller::runAction] Route to run: queue/run
+2019-05-29 13:44:10 [-][1][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\QueueController::actionRun()
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_queue`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_queue' AND kcu.table_name = 'craft_queue'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130250 - `ttr`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130250 - `ttr`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`=NULL, `timeUpdated`=NULL, `progress`=0 WHERE `timeUpdated` < 1559130250 - `ttr`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE (`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL)))
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130250))
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130250))
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1559130250))
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:10', `timeUpdated`=1559130250, `attempt`=1 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:10', `timeUpdated`=1559130250, `attempt`=1 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `dateReserved`='2019-05-29 11:44:10', `timeUpdated`=1559130250, `attempt`=1 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [20] Updating element slugs and URIs (attempt: 1) - Started
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_carouselLegend`, `content`.`field_clubCity`, `content`.`field_clubContactEmail`, `content`.`field_clubContactPerson`, `content`.`field_clubCountry`, `content`.`field_clubDetail`, `content`.`field_clubFacebookUrl`, `content`.`field_clubInstagramUrl`, `content`.`field_clubName`, `content`.`field_clubUrl`, `content`.`field_eventCity`, `content`.`field_eventCountry`, `content`.`field_eventDateFrom`, `content`.`field_eventDateTo`, `content`.`field_eventDetail`, `content`.`field_eventFbEventUrl`, `content`.`field_eventHostingClub`, `content`.`field_eventLocation`, `content`.`field_eventTitle`, `content`.`field_eventUrl`, `content`.`field_sectionMenuTitle`, `content`.`field_newsBody`, `content`.`field_newsDate`, `content`.`field_newsSummary`, `content`.`field_newsTitle`, `content`.`field_pageContent`, `content`.`field_pageMenuTitle`, `content`.`field_pageTitle`, `content`.`field_sectionTitle`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `craft_elements` `elements`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `craft_content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `craft_structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+WHERE (`elements_sites`.`siteId`=1) AND (`content`.`siteId`=1) AND (`elements`.`id`='4') AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `craft_entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `craft_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `craft_content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `craft_structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130250 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130250 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_queue` SET `progress`=0, `timeUpdated`=1559130250 WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `sections`.`id`, `sections`.`structureId`, `sections`.`name`, `sections`.`handle`, `sections`.`type`, `sections`.`enableVersioning`, `sections`.`propagateEntries`, `sections`.`uid`, `structures`.`maxLevels`
+FROM `craft_sections` `sections`
+LEFT JOIN `craft_structures` `structures` ON (`structures`.`id` = `sections`.`structureId`) AND (`structures`.`dateDeleted` IS NULL)
+WHERE `sections`.`dateDeleted` IS NULL
+ORDER BY `name`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `sections_sites`.`id`, `sections_sites`.`sectionId`, `sections_sites`.`siteId`, `sections_sites`.`enabledByDefault`, `sections_sites`.`hasUrls`, `sections_sites`.`uriFormat`, `sections_sites`.`template`
+FROM `craft_sections_sites` `sections_sites`
+INNER JOIN `craft_sites` `sites` ON `sites`.`id` = `sections_sites`.`siteId`
+WHERE `sections_sites`.`sectionId`=1
+ORDER BY `sites`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `craft_fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=1)
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `craft_fields` `fields`
+INNER JOIN `craft_fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `craft_fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=1
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2019-05-29 13:44:10 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:10 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:10 [-][1][-][profile begin][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:10 [-][1][-][profile end][craft\web\twig\Template::display] __string_template__b18feb07a287e7da711f9566f1271b63374685615a216e50d6b93b4304bc2f3f
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM `craft_elements_sites` `elements_sites`
+INNER JOIN `craft_elements` `elements` ON `elements`.`id` = `elements_sites`.`elementId`
+WHERE ((`elements_sites`.`siteId`=1) AND (`elements`.`dateDeleted` IS NULL)) AND (`elements_sites`.`uri`='ehba/harcourt-bike-polo') AND (NOT (`elements`.`id`='4'))
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `craft_elements_sites`
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'craft_elements_sites' AND kcu.table_name = 'craft_elements_sites'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:10' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:10' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] UPDATE `craft_elements_sites` SET `slug`='harcourt-bike-polo', `uri`='ehba/harcourt-bike-polo', `dateUpdated`='2019-05-29 11:44:10' WHERE (`elementId`='4') AND (`siteId`=1)
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT DISTINCT `cacheId`
+FROM `craft_templatecacheelements`
+WHERE `elementId`='4'
+2019-05-29 13:44:10 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [20] Updating element slugs and URIs (attempt: 1) - Done (time: 0.353s)
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `craft_queue` WHERE `id`='20'
+2019-05-29 13:44:10 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1
+2019-05-29 13:44:10 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `craft_queue`
+WHERE ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` <= 1559130250 - `delay`)
+ORDER BY `priority`, `id`
+LIMIT 1

@@ -1,4 +1,4 @@
-dateModified: 1558780928
+dateModified: 1559130648
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -730,7 +730,7 @@ plugins:
     enabled: true
     schemaVersion: 2.1.0
     settings:
-      enableCsrfProtection: ''
+      enableCsrfProtection: '1'
       entryVariable: entry
       sections:
         81ca2ba3-590e-4124-aa39-0cbc70aea6a2:
