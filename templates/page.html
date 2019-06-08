@@ -13,15 +13,17 @@
 
     <div class="page-content">
 
+
+        {% if entry.pageBanner.one() %}
+        <div class=" is-fullwidth" style="">
+            <img src="{{ entry.pageBanner.one().getUrl('banner')|replace({'clm': 'ovh'}) }}" class="" style="width: 100%;">
+        </div>
+        {% endif %}
+
+
         <h1 class="title is-2">
             {{entry.sectionTitle}}
         </h1>
-
-        {% if entry.pageBanner.one() %}
-        <div class="is-hidden is-fullwidth" style="">
-            <img src="{{ entry.pageBanner.one().getUrl()|replace({'clm': 'ovh'}) }}" class=" card" style="width: 100%;">
-        </div>
-        {% endif %}
 
         <div class="content has-text-left">
             {{entry.pageContent}}
