@@ -17,12 +17,13 @@
             <div class="navbar-end">
             </div>
             <div class="navbar-end ">
-
+                {#
                 <div class="navbar-item">
                     <a class=" is-white" href="/">
                         <span>Home</span>
                     </a>
                 </div>
+                #}
                 {% nav page in pages %}
                     {% if page.hasDescendants() %}
                     <div class="navbar-item has-dropdown is-hoverable is-dark">
@@ -38,11 +39,20 @@
                         </div>
                     </div>
                     {% else %}
+                    {% if page.slug=='home-page' %}
+
+                    <div class="navbar-item">
+                        <a class=" is-white" href="/">
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    {% else %}
                     <div class="navbar-item {% if entry is defined %} {{ page.id == entry.id ? 'is-active' }} {%endif%}">
                         <a class="" href="{{ page.getUrl() }}">
                             <span>{{ page.pageMenuTitle }}</span>
                         </a>
                     </div>
+                    {% endif %}
                     {% endif %}
                 {% endnav %}
             </div>
