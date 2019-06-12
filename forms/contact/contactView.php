@@ -81,7 +81,15 @@ $form = ActiveForm::begin([
                         <?= $form->field($model, 'subject',     ['template' => '<div class="field select is-fullwidth">{input}{error}{hint}</div>']
 
                         )->dropDownList(
-                                ['General Info', 'Clubs', 'Rules', 'Sponsoring', 'Other'],
+                                [
+                                    'General Info'=>'General Info',
+                                    'Clubs'=>'Clubs',
+                                    'Rules'=>'Rules',
+                                    'Sponsoring'=>'Sponsoring',
+                                    'Volunteering'=>'Volunteering',
+                                    'Website Help'=>'Website Help',
+                                    'Other'=>'Other'
+                                ],
                                 [
                                         'prompt'=>'Choose...',
                                         'class'=>'select is-fullwidth'
