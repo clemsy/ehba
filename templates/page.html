@@ -11,14 +11,15 @@
 <div class="is-fullwidth">
 
 
+    {% if entry.pageBanner.one() %}
+    <div class=" is-fullwidth" style="">
+        <img src="{{ entry.pageBanner.one().getUrl('pagebanner')|replace({'clm': 'ovh'}) }}" class="" style="width: 100%;max-height: 400px">
+    </div>
+    {% endif %}
+    
     <div class="page-content">
 
 
-        {% if entry.pageBanner.one() %}
-        <div class=" is-fullwidth" style="">
-            <img src="{{ entry.pageBanner.one().getUrl('pagebanner')|replace({'clm': 'ovh'}) }}" class="" style="width: 100%;max-height: 400px">
-        </div>
-        {% endif %}
 
 
         {% if entry.slug!='home-page' %}
