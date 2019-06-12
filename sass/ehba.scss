@@ -60,3 +60,12 @@ $footer-background-color: $brown;
   height: 60px;
   max-height: 60px;
 }
+
+@media screen and (min-width: 768px) {
+
+  .page-content {
+    padding: 0 1rem;
+    
+  }
+
+}
