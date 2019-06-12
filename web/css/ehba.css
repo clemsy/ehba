@@ -4070,3 +4070,11 @@ a.navbar-item,
       padding: 9rem 1.5rem; }
     .section.is-large {
       padding: 18rem 1.5rem; } }
+
+.navbar-item {
+  font-size: 110%;
+  font-weight: bold; }
+
+.navbar-item img {
+  height: 60px;
+  max-height: 60px; }
