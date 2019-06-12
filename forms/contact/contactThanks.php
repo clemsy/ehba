@@ -4,4 +4,4 @@
  */
 ?>
 
-<p>Thank you <?= $model->firstname ?>, we will contact you soon</p>
+<p>Thank you <?= $model->fullname ?>, we will contact you soon</p>

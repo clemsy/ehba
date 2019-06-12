@@ -1,8 +1,17 @@
-dateModified: 1560323259
+dateModified: 1560326163
 email:
-  fromEmail: clemsy@gmail.com
+  fromEmail: ehba@c77.be
   fromName: EHBA
-  transportType: craft\mail\transportadapters\Sendmail
+  template: null
+  transportType: craft\mail\transportadapters\Smtp
+  transportSettings:
+    host: mail.infomaniak.com
+    port: '587'
+    useAuthentication: '1'
+    username: ehba@c77.be
+    password: Z25wmgZYvmHr
+    encryptionMethod: tls
+    timeout: '10'
 fieldGroups:
   e5ba11ed-95e6-426a-9e9b-020223f63ceb:
     name: Common
@@ -118,7 +127,7 @@ fields:
     translationKeyFormat: null
     type: craft\redactor\Field
     settings:
-      redactorConfig: Standard.json
+      redactorConfig: ''
       purifierConfig: ''
       cleanupHtml: true
       removeInlineStyles: '1'

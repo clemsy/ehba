@@ -8,6 +8,15 @@
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
+
+?>
+
+<div class="container">
+
+    <h3 class="title is-4">Contact form</h3>
+
+<?php
+
 // Start ajax handling of the form
 Pjax::begin(['enablePushState' => false, 'id' => 'pjax-'.$handle]);
 
@@ -22,18 +31,98 @@ $form = ActiveForm::begin([
 
 ?>
 
-<?= $form->field($model, 'firstname')->textInput(); ?>
-<?= $form->field($model, 'lastname')->textInput(); ?>
-<?= $form->field($model, 'phone')->textInput(); ?>
-<?= $form->field($model, 'email')->textInput(); ?>
 
-<?= $form->field($model, 'message')->textarea(); ?>
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+            <label class="label">From</label>
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <p class="control is-expanded has-icons-left">
 
-    <div>
-        <button type="submit">
-            <?= Craft::t('site', 'Send request'); ?>
-        </button>
+                    <?= $form->field($model, 'fullname')->textInput(['class'=>'input', 'placeholder'=>'Your name'])->label(false); ?>
+
+                </p>
+            </div>
+            <div class="field">
+                <p class="control is-expanded has-icons-left has-icons-right">
+                    <?= $form->field($model, 'email')->textInput(['class'=>'input', 'placeholder'=>'Your email address'])->label(false); ?>
+
+                </p>
+            </div>
+        </div>
     </div>
+
+    <div class="field is-horizontal">
+        <div class="field-label"></div>
+        <div class="field-body">
+            <div class="field is-expanded">
+                <div class="field">
+                    <p class="control is-expanded">
+                        <?= $form->field($model, 'phone')->textInput(['class'=>'input', 'placeholder'=>'Your telephone number'])->label(false); ?>
+                    </p>
+                </div>
+                <p class="help">ex: +34 123 456 789</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+            <label class="label">Subject category</label>
+        </div>
+        <div class="field-body">
+            <div class="field is-expanded">
+                <div class="control">
+                    <div class="select is-fullwidth">
+
+                        <?= $form->field($model, 'subject',     ['template' => '<div class="field select is-fullwidth">{input}{error}{hint}</div>']
+
+                        )->dropDownList(
+                                ['General Info', 'Clubs', 'Rules', 'Sponsoring', 'Other'],
+                                [
+                                        'prompt'=>'Choose...',
+                                        'class'=>'select is-fullwidth'
+                                    ]
+                        )->label(false); ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+            <label class="label">Message</label>
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <div class="control">
+                    <?= $form->field($model, 'message')->textarea(['class'=>'textarea'])->label(false); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field is-horizontal">
+        <div class="field-label">
+            <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <div class="control has-text-right">
+                    <button type="submit" class="button is-primary">
+                        <?= Craft::t('site', 'Send message'); ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 <?php
@@ -43,3 +132,6 @@ $form = ActiveForm::begin([
 
   // End ajax handling
   Pjax::end();
+
+  ?>
+</div>

@@ -7,8 +7,10 @@ use plugins\dolphiq\form\models\Form;
 
 class contactForm extends Form {
 
+    public $fullname = "";
     public $firstname = "";
     public $lastname = "";
+    public $subject = "";
     public $phone = "";
     public $email = "";
     public $message = "";
@@ -16,7 +18,7 @@ class contactForm extends Form {
     public function rules()
     {
         return [
-            [['firstname', 'lastname', 'email', 'message'], 'required'],
+            [['fullname', 'subject', 'email', 'message'], 'required'],
             ['email', 'email'],
             ['phone', 'safe']
         ];
@@ -25,10 +27,11 @@ class contactForm extends Form {
     public function attributeLabels()
     {
         return [
-            'firstname' => Craft::t('site', 'Firstname'),
+            'fullname' => Craft::t('site', 'Name'),
             'lastname' => Craft::t('site', 'Lastname'),
             'phone' => Craft::t('site', 'Phone'),
             'email' => Craft::t('site', 'Email'),
+            'subject' => Craft::t('site', 'Subject'),
             'message' => Craft::t('site', 'Message'),
         ];
     }

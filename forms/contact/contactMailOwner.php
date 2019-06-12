@@ -13,9 +13,9 @@ use yii\widgets\DetailView;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'firstname',
-            'lastname',
+            'fullname',
             'email',
+            'subject',
             'phone',
             'message:ntext'
         ]
