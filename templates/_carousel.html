@@ -24,7 +24,6 @@
     }
 
     .carousel-cell {
-        width: 66%;
         height: 400px;
         margin-right: 10px;
         background: transparent;
@@ -38,14 +37,21 @@
         background-size: cover; /* keyword value */
     }
 
-    /* cell number
-    .carousel-cell:before {
-        display: block;
-        text-align: center;
-        content: counter(gallery-cell);
-        line-height: 400px;
-        font-size: 80px;
-        color: white;
-    }*/
+
+
+    @media screen and (max-width: 1024px) {
+
+        .carousel-cell {
+            height: 600px;
+            width: 100%; /* full width */
+            /* center images in cells with flexbox */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: contain; /* keyword value */
+        }
+
+    }
+
 
 </style>
