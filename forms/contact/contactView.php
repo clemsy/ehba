@@ -22,6 +22,8 @@ Pjax::begin(['enablePushState' => false, 'id' => 'pjax-'.$handle]);
 
 // Start active form
 $form = ActiveForm::begin([
+
+    'enableClientValidation' => true,
     'action' => \craft\helpers\UrlHelper::actionUrl('dolphiq-craft3-forms/main/index', ['handle' => $handle]),
     'method' => 'POST',
     'options' => [
@@ -120,6 +122,9 @@ $form = ActiveForm::begin([
             </div>
         </div>
     </div>
+    <p>
+        <br>
+    </p>
 
 
 
