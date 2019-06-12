@@ -1,4 +1,4 @@
-dateModified: 1559130648
+dateModified: 1560323259
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -750,6 +750,19 @@ plugins:
     enabled: false
   dolphiq-craft3-forms:
     schemaVersion: 1.0.0
+    enabled: true
+    settings:
+      form_path: '@root/forms/'
+      form_namespace: app\forms\
+      form_thanks_view: thanks.php
+      append_form_part: Form.php
+      forms:
+        contact:
+          enabled: '1'
+          enabled_logging: '1'
+          mail_to: clemsy@gmail.com
+          mail_subject_owner: 'EHBA Website - New Contact Form Message'
+          mail_subject_customer: 'EHBA Website - Thank you for your message'
   country-fields:
     edition: standard
     enabled: true
