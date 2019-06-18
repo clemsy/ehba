@@ -780,6 +780,8 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  advanced-url-field:
+    schemaVersion: 1.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
