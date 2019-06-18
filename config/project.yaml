@@ -798,8 +798,11 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
   advanced-url-field:
+<<<<<<< HEAD
     edition: standard
     enabled: true
+=======
+>>>>>>> 3d64485e706d954fb249bdca3934b56eed43ce11
     schemaVersion: 1.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
