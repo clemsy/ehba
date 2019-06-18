@@ -4,13 +4,19 @@
     {% for k, slide in carouselImages %}
     {% set image = slide.carouselImage.one() %}
 
-    <div class="carousel-cell"  data-flickity-bg-lazyload="{{ image.getUrl()|replace({'clm': 'ovh'}) }}">
+    <div class="carousel-cell" id="carouselCell{{k}}" data-index="{{k}}" data-flickity-bg-lazyload="{{ image.getUrl()|replace({'clm': 'ovh'}) }}">
+        {% if slide.carouselLink is not empty %}
+        <a href="{{slide.carouselLink}}" id="carouselLink{{k}}">
+        {% endif %}
         <div class="carousel-legend" style="position: absolute; bottom:0; left:0; right: 0 ;height: 65px;background: #E2E2E2;color:black;width:100%;opacity: 0.6">
             <div class="content has-text-centered" style="padding:5px;opacity: 1">
                 <h5 class="is-paddingless is-marginless	">{{slide.title}}</h5>
                 {{slide.carouselLegend}}
             </div>
         </div>
+        {% if slide.carouselLink is not empty %}
+        </a>
+        {% endif %}
     </div>
 
     {% endfor %}
@@ -34,6 +40,7 @@
         align-items: center;
         justify-content: center;
         background-size: cover; /* keyword value */
+        cursor: pointer;
     }
 
 

@@ -76,9 +76,21 @@
         autoPlay: 1500,
         pauseAutoPlayOnHover: false,
         percentPosition: true,
-        wrapAround: true
+        wrapAround: true,
+        draggable: false
     });
 
+    $carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+        // dismiss if cell was not clicked
+        if ( !cellElement ) {
+            return;
+        }
+        let link = $('#carouselLink'+cellIndex).attr('href')
+        if(link!=undefined) {
+            window.location.href = link;
+        }
+
+    });
 
 </script>
 
