@@ -1,6 +1,7 @@
 {
   "require": {
     "apt/craft-countries": "^1.0",
+    "charliedev/advanced-url-field": "1.0.0",
     "craftcms/cms": "^3.0.0",
     "craftcms/guest-entries": "^2.2",
     "craftcms/redactor": "2.3.3.2",
