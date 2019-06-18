@@ -1,4 +1,4 @@
-dateModified: 1560326163
+dateModified: 1560856649
 email:
   fromEmail: ehba@c77.be
   fromName: EHBA
@@ -718,6 +718,23 @@ fields:
       columnType: text
     fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
     contentColumnType: text
+  28608288-52f0-4613-8b09-7d2d591ac823:
+    name: 'Carousel Link'
+    handle: carouselLink
+    instructions: 'Enter a link , begin with http:// or https://www.......'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: charliedev\advancedurl\fields\AdvancedUrlField
+    settings:
+      placeholder: ''
+      urlTypes:
+        - relative
+        - absolute
+        - mailto
+        - tel
+    contentColumnType: string
+    fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
 imageTransforms:
   a7cb99c7-05d0-4d3f-b0f2-993354957546:
     format: null
@@ -781,6 +798,11 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
   advanced-url-field:
+<<<<<<< HEAD
+    edition: standard
+    enabled: true
+=======
+>>>>>>> 3d64485e706d954fb249bdca3934b56eed43ce11
     schemaVersion: 1.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
@@ -1013,12 +1035,18 @@ sections:
                 name: Carousel
                 sortOrder: 1
                 fields:
-                  7955ddcc-ffb7-4442-84dc-d735b08605f5:
+                  c5363931-44dd-4e47-b280-8bd04d816db5:
                     required: true
                     sortOrder: 1
+                  7955ddcc-ffb7-4442-84dc-d735b08605f5:
+                    required: true
+                    sortOrder: 2
                   1b96b089-06f6-48ce-a8a1-0d0fadff7f0a:
                     required: false
-                    sortOrder: 2
+                    sortOrder: 3
+                  28608288-52f0-4613-8b09-7d2d591ac823:
+                    required: true
+                    sortOrder: 4
   59225f10-708f-475e-9c57-d97120360f09:
     name: Clubs
     handle: clubs
