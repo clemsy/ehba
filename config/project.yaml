@@ -1,17 +1,8 @@
-dateModified: 1560856649
+dateModified: 1558729496
 email:
-  fromEmail: ehba@c77.be
+  fromEmail: clemsy@gmail.com
   fromName: EHBA
-  template: null
-  transportType: craft\mail\transportadapters\Smtp
-  transportSettings:
-    host: mail.infomaniak.com
-    port: '587'
-    useAuthentication: '1'
-    username: ehba@c77.be
-    password: Z25wmgZYvmHr
-    encryptionMethod: tls
-    timeout: '10'
+  transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
   e5ba11ed-95e6-426a-9e9b-020223f63ceb:
     name: Common
@@ -29,8 +20,6 @@ fieldGroups:
     name: Calendar
   d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6:
     name: Carousel
-  9249b684-8ae7-477e-b7a7-fd34346e577d:
-    name: Clubs
 fields:
   8e547dcc-758e-436b-9edf-db36de1fbe56:
     name: 'Menu Title'
@@ -127,7 +116,7 @@ fields:
     translationKeyFormat: null
     type: craft\redactor\Field
     settings:
-      redactorConfig: ''
+      redactorConfig: Standard.json
       purifierConfig: ''
       cleanupHtml: true
       removeInlineStyles: '1'
@@ -369,8 +358,15 @@ fields:
     searchable: true
     translationMethod: none
     translationKeyFormat: null
-    type: apt\craftcountries\fields\Country
-    contentColumnType: string
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
     fieldGroup: 8968df0c-fe5c-4211-8aa3-6443889ddfa9
   45cdddb9-66c9-46aa-aee6-0710005d13a3:
     name: 'Event Date From'
@@ -545,196 +541,6 @@ fields:
       availableTransforms: ''
     contentColumnType: text
     fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
-  5054c845-30b8-4287-a8c7-d377a0dc7d35:
-    name: 'Club Country'
-    handle: clubCountry
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: apt\craftcountries\fields\Country
-    contentColumnType: string
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-  fc351515-fa03-4176-9b31-06cd4d2737bd:
-    name: 'Club City'
-    handle: clubCity
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  ddcedd6e-34fc-4323-a4ac-ccbaaa48a2c3:
-    name: 'Club Name'
-    handle: clubName
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  c75d9f79-3579-4f73-bf61-1f13977590ad:
-    name: 'Club Detail'
-    handle: clubDetail
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: '1'
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  060f5626-2ece-410e-8974-92dde2cef060:
-    name: 'Club URL'
-    handle: clubUrl
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  b4de6383-5c74-41bf-8c9a-83073b308c5c:
-    name: 'Club Logo'
-    handle: clubLogo
-    instructions: ''
-    searchable: true
-    translationMethod: site
-    translationKeyFormat: null
-    type: craft\fields\Assets
-    settings:
-      useSingleFolder: ''
-      defaultUploadLocationSource: 'volume:8432c035-a420-4820-800f-fe8a94fb32be'
-      defaultUploadLocationSubpath: '/{slug}/'
-      singleUploadLocationSource: 'volume:fb92972d-d73f-4ae2-a9ef-0e4d7cfac06b'
-      singleUploadLocationSubpath: ''
-      restrictFiles: '1'
-      allowedKinds:
-        - image
-      sources:
-        - 'volume:8432c035-a420-4820-800f-fe8a94fb32be'
-      source: null
-      targetSiteId: null
-      viewMode: list
-      limit: ''
-      selectionLabel: ''
-      localizeRelations: false
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: string
-  ae48e9a4-fd9d-4172-a111-1ba40715b1da:
-    name: 'Club Facebook URL'
-    handle: clubFacebookUrl
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  1d8b1e39-2a84-4a0b-b22c-fe695e81309c:
-    name: 'Club Instagram Url'
-    handle: clubInstagramUrl
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  34caa0b0-e306-42a8-bfb5-d7673ee1f2a7:
-    name: 'Club Contact Person'
-    handle: clubContactPerson
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  2b8d7d66-b7fd-4503-8684-cd3583d2417c:
-    name: 'Club Contact Email'
-    handle: clubContactEmail
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\PlainText
-    settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
-      columnType: text
-    fieldGroup: 9249b684-8ae7-477e-b7a7-fd34346e577d
-    contentColumnType: text
-  28608288-52f0-4613-8b09-7d2d591ac823:
-    name: 'Carousel Link'
-    handle: carouselLink
-    instructions: 'Enter a link , begin with http:// or https://www.......'
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: charliedev\advancedurl\fields\AdvancedUrlField
-    settings:
-      placeholder: ''
-      urlTypes:
-        - relative
-        - absolute
-        - mailto
-        - tel
-    contentColumnType: string
-    fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
 imageTransforms:
   a7cb99c7-05d0-4d3f-b0f2-993354957546:
     format: null
@@ -771,39 +577,6 @@ plugins:
           enabledByDefault: ''
           runValidation: ''
           authorUid: 758a9715-8e42-472a-8ef6-9c4bcf6095ea
-  country-select:
-    schemaVersion: 1.0.0
-    enabled: false
-  dolphiq-craft3-forms:
-    schemaVersion: 1.0.0
-    enabled: true
-    settings:
-      form_path: '@root/forms/'
-      form_namespace: app\forms\
-      form_thanks_view: thanks.php
-      append_form_part: Form.php
-      forms:
-        contact:
-          enabled: '1'
-          enabled_logging: '1'
-          mail_to: clemsy@gmail.com
-          mail_subject_owner: 'EHBA Website - New Contact Form Message'
-          mail_subject_customer: 'EHBA Website - Thank you for your message'
-  country-fields:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  craft-emailobfuscator:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-  advanced-url-field:
-<<<<<<< HEAD
-    edition: standard
-    enabled: true
-=======
->>>>>>> 3d64485e706d954fb249bdca3934b56eed43ce11
-    schemaVersion: 1.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
@@ -1035,82 +808,11 @@ sections:
                 name: Carousel
                 sortOrder: 1
                 fields:
-                  c5363931-44dd-4e47-b280-8bd04d816db5:
-                    required: true
-                    sortOrder: 1
                   7955ddcc-ffb7-4442-84dc-d735b08605f5:
                     required: true
-                    sortOrder: 2
+                    sortOrder: 1
                   1b96b089-06f6-48ce-a8a1-0d0fadff7f0a:
                     required: false
-                    sortOrder: 3
-                  28608288-52f0-4613-8b09-7d2d591ac823:
-                    required: true
-                    sortOrder: 4
-  59225f10-708f-475e-9c57-d97120360f09:
-    name: Clubs
-    handle: clubs
-    type: channel
-    enableVersioning: true
-    propagateEntries: true
-    siteSettings:
-      ca2fd390-4a61-42c9-ba48-9f79c8bca295:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: 'club/{slug}'
-        template: clubs/_entry
-    entryTypes:
-      a2128122-4ab9-4656-8cb3-ffc29620b41b:
-        name: Clubs
-        handle: club
-        hasTitleField: false
-        titleLabel: Title
-        titleFormat: '{clubCountry}-{clubName}'
-        sortOrder: 1
-        fieldLayouts:
-          946c1272-7dc2-4717-a873-86708104a38a:
-            tabs:
-              -
-                name: Clubs
-                sortOrder: 1
-                fields:
-                  ddcedd6e-34fc-4323-a4ac-ccbaaa48a2c3:
-                    required: true
-                    sortOrder: 1
-                  fc351515-fa03-4176-9b31-06cd4d2737bd:
-                    required: true
-                    sortOrder: 2
-                  5054c845-30b8-4287-a8c7-d377a0dc7d35:
-                    required: true
-                    sortOrder: 3
-                  c75d9f79-3579-4f73-bf61-1f13977590ad:
-                    required: false
-                    sortOrder: 4
-                  b4de6383-5c74-41bf-8c9a-83073b308c5c:
-                    required: false
-                    sortOrder: 5
-              -
-                name: 'Url and Social Medias'
-                sortOrder: 2
-                fields:
-                  060f5626-2ece-410e-8974-92dde2cef060:
-                    required: false
-                    sortOrder: 1
-                  ae48e9a4-fd9d-4172-a111-1ba40715b1da:
-                    required: false
-                    sortOrder: 2
-                  1d8b1e39-2a84-4a0b-b22c-fe695e81309c:
-                    required: false
-                    sortOrder: 3
-              -
-                name: 'Contact Info'
-                sortOrder: 3
-                fields:
-                  34caa0b0-e306-42a8-bfb5-d7673ee1f2a7:
-                    required: true
-                    sortOrder: 1
-                  2b8d7d66-b7fd-4503-8684-cd3583d2417c:
-                    required: true
                     sortOrder: 2
 siteGroups:
   e956e11c-2bae-4047-8092-901d67ddb85a:
@@ -1187,12 +889,3 @@ volumes:
     settings:
       path: '@webroot/assets/carousel'
     sortOrder: 5
-  8432c035-a420-4820-800f-fe8a94fb32be:
-    name: Clubs
-    handle: clubAssets
-    type: craft\volumes\Local
-    hasUrls: true
-    url: '@web/assets/clubs'
-    settings:
-      path: '@webroot/assets/clubs'
-    sortOrder: 6
