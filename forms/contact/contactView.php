@@ -55,6 +55,7 @@ $form = ActiveForm::begin([
         </div>
     </div>
 
+    <?php /*
     <div class="field is-horizontal">
         <div class="field-label"></div>
         <div class="field-body">
@@ -68,6 +69,7 @@ $form = ActiveForm::begin([
             </div>
         </div>
     </div>
+    */ ?>
 
     <div class="field is-horizontal">
         <div class="field-label is-normal">
@@ -110,7 +112,7 @@ $form = ActiveForm::begin([
         <div class="field-body">
             <div class="field">
                 <div class="control">
-                    <?= $form->field($model, 'message')->textarea(['class'=>'textarea'])->label(false); ?>
+                    <?= $form->field($model, 'message')->textarea(['class'=>'textarea', 'rows'=>12])->label(false); ?>
                 </div>
             </div>
         </div>
