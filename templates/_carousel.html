@@ -11,8 +11,10 @@
         <div class="carousel-legend" style="">
             <div class="content " style="padding:5px;opacity: 1">
                 <h5 class="is-paddingless is-marginless	">{{slide.title}}</h5>
+
                 {{slide.carouselLegend|raw}}
-                {% if slide.carouselPhotoCredit %}}
+
+                {% if slide.carouselPhotoCredit %}
                 <div class="carousel-legend" style="position: absolute; bottom:0;  right: 0 ;">
                     <div class="content has-text-right banner-title">
                         &copy; {{slide.carouselPhotoCredit}}
