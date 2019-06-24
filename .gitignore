@@ -1,6 +1,9 @@
 /.env
 /.idea
 /vendor
+/vendor/*
+vendor
+storage
 /storage
 /node_modules
 /web/assets

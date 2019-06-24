@@ -61,8 +61,30 @@ $footer-background-color: $brown;
   max-height: 60px;
 }
 
-@media screen and (max-width: 768px) {
-  .page-content {
-    padding: 0 1rem;
+.banner-title {
+  padding:1rem 2rem 1rem;
+  opacity: 1
+}
+.carousel-legend {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right: 0 ;
+  height: 65px;
+  background: #E2E2E2;
+  color:black;
+  width:100%;
+  opacity: 0.6;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .carousel-legend {
+    text-align: left;
+  }
+  .banner-title {
+    padding:2px 5px;
+    margin-right: 10px;
   }
 }
