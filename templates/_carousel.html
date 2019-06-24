@@ -4,7 +4,7 @@
     {% for k, slide in carouselImages %}
     {% set image = slide.carouselImage.one() %}
 
-    <div class="carousel-cell" id="carouselCell{{k}}" data-index="{{k}}" data-flickity-bg-lazyload="{{ image.getUrl()|replace({'clm': 'ovh'}) }}">
+    <div class="carousel-cell" id="carouselCell{{k}}" data-index="{{k}}" data-flickity-bg-lazyload="{{ image.getUrl() }}">
         {% if slide.carouselLink is not empty %}
         <a href="{{slide.carouselLink}}" id="carouselLink{{k}}">
         {% endif %}
@@ -14,7 +14,7 @@
                 {{slide.carouselLegend}}
                 {% if slide.carouselPhotoCredit %}}
                 <div class="carousel-legend" style="position: absolute; bottom:0;  right: 0 ;">
-                    <div class="content has-text-right banner-title" style="">
+                    <div class="content has-text-right banner-title">
                         &copy; {{slide.carouselPhotoCredit}}
                     </div>
                 </div>
