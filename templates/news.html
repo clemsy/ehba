@@ -14,7 +14,7 @@
         <hr>
 
         <div>
-            {% paginate craft.entries.section('news').orderBy('newsDate DESC').limit(10) as items %}
+            {% paginate craft.entries.section('news').orderBy('postDate DESC').limit(10) as items %}
 
             <ul>
             {% for k, item in items %}

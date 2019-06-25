@@ -1,4 +1,4 @@
-{% set latest = craft.entries.section('news').orderBy('newsDate DESC').limit(10) %}
+{% set latest = craft.entries.section('news').orderBy('postDate DESC').limit(10) %}
 
 <h3 class="title is-4">Latest news</h3>
 <ul>
