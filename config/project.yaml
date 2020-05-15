@@ -1,4 +1,4 @@
-dateModified: 1558729496
+dateModified: 1589523130
 email:
   fromEmail: clemsy@gmail.com
   fromName: EHBA
@@ -541,6 +541,36 @@ fields:
       availableTransforms: ''
     contentColumnType: text
     fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
+  7570d85d-bbab-4e66-88d7-f337fe779632:
+    name: 'Carousel Link'
+    handle: carouselLink
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Url
+    settings:
+      placeholder: ''
+      maxLength: '255'
+    contentColumnType: string(255)
+    fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
+  e20a7679-3498-4f52-a860-1b4c06e01e39:
+    name: 'Carousel Photo Credit'
+    handle: carouselPhotoCredit
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: d5a3ad1d-9e46-4a8d-b03a-aae2dcc147f6
 imageTransforms:
   a7cb99c7-05d0-4d3f-b0f2-993354957546:
     format: null
@@ -577,6 +607,38 @@ plugins:
           enabledByDefault: ''
           runValidation: ''
           authorUid: 758a9715-8e42-472a-8ef6-9c4bcf6095ea
+  dolphiq-craft3-forms:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      form_path: '@root/forms/'
+      form_namespace: app\forms\
+      form_thanks_view: thanks.php
+      append_form_part: Form.php
+      forms:
+        contact:
+          enabled: '1'
+          enabled_logging: '1'
+          mail_to: clemsy@gmail.com
+          mail_subject_owner: 'EHBA Robot : New Message from the Website'
+          mail_subject_customer: 'EHBA Robot : Thank you for your message!'
+  craft-emailobfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  country-fields:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  advanced-url-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   54727070-0b31-4417-82b8-24bad104a32f:
     name: Sections
@@ -808,12 +870,21 @@ sections:
                 name: Carousel
                 sortOrder: 1
                 fields:
+                  c5363931-44dd-4e47-b280-8bd04d816db5:
+                    required: false
+                    sortOrder: 1
                   7955ddcc-ffb7-4442-84dc-d735b08605f5:
                     required: true
-                    sortOrder: 1
+                    sortOrder: 2
+                  e20a7679-3498-4f52-a860-1b4c06e01e39:
+                    required: false
+                    sortOrder: 3
                   1b96b089-06f6-48ce-a8a1-0d0fadff7f0a:
                     required: false
-                    sortOrder: 2
+                    sortOrder: 4
+                  7570d85d-bbab-4e66-88d7-f337fe779632:
+                    required: false
+                    sortOrder: 5
 siteGroups:
   e956e11c-2bae-4047-8092-901d67ddb85a:
     name: EHBA
