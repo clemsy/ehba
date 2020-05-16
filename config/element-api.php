@@ -34,6 +34,21 @@ return [
                     ];
                 },
             ];
+        },,
+        'rest/<slug:{slug}>.json' => function($slug) {
+            return [
+                'elementType' => Entry::class,
+                'criteria' => ['slug' => $slug],
+                'one' => true,
+                'transformer' => function(Entry $entry) {
+                    return [
+                        'title' => $entry->pageTitle,
+                        'section' => $entry->sectionTitle,
+                        'url' => $entry->url,
+                        'body' => $entry->pageContent,
+                    ];
+                },
+            ];
         },
     ]
 ];
